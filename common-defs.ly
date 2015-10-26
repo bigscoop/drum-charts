@@ -9,9 +9,9 @@ ticktock = \drummode {
 }
 
 
-swingTheme = \drummode
+swingRideBar = \drummode
 {
-	cymr4 \scaleDurations 2/3 { cymr8*2 cymr8}
+	cymr4 \scaleDurations 2/3 { cymr8*2 cymr8 } cymr4 \scaleDurations 2/3 { cymr8*2 cymr8 }
 }
 
 

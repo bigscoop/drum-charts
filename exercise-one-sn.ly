@@ -29,7 +29,7 @@ snarePattern = {
 			sn4 s8 sn4 s8 r8 s8 sn4. s8 | r8 s8 sn4. s8 sn8*2 sn4 s8 sn8 | sn8*2 sn4 s8 sn4 s8 sn4 s8 sn8 | r8 s8 sn4 s8 sn4 s8 sn4 s8 r8 |
 			\break
 			
-			sn4 s8 sn4 s8 sn8*2 sn4 s8 sn8 | sn8*2 sn4 s8 sn8 sn8*2 sn4 s8 sn8 | r8 s8 sn4 s8 r8 sn4 r8 sn4 r8 | sn4 s8 r8 s8 sn8 ~ sn8 sn8*2 sn4 s8 |
+			sn4 s8 sn4 s8 sn8*2 sn4 s8 sn8 | sn8*2 sn4 s8 sn8 sn8*2 sn4 s8 sn8 | r8 s8 sn4 s8 r8 sn4 r8 sn4 r8 | sn4 s8 r8 s8 sn8 ~ sn8*2 sn8 sn4 s8 |
 			\break
 			
 			r8 s8 sn4 s8 r8 r8 s8 sn4 s8 r8 | r8 s8 sn4. s8 sn8*2 sn4 s8 sn8 | sn4 s8 sn8*2 sn8 ~ sn8*2 sn8 sn4 s8 | sn8*2 sn4 s8 sn8 sn4 s8 sn4 s8 |
@@ -57,7 +57,7 @@ outPDF = \drummode
 	<<
 %		\new DrumVoice {
 %			\voiceOne
-%			\repeat unfold 38 { \swingTheme } 
+%			\repeat unfold 40 { \swingRideBar } 
 %		}
 
 		\new DrumVoice {
@@ -80,7 +80,7 @@ outMidi = \drummode
 	<<
 		\new DrumVoice {
 			\voiceOne
-			\repeat unfold 38 { \swingTheme } 
+			\repeat unfold 40 { \swingRideBar } 
 		}
 
 		\new DrumVoice {
