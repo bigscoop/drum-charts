@@ -1,11 +1,7 @@
 \version "2.18.2"
 
 ticktock = \drummode {
-	\tempo 4=120
-
-	\drummode {
-		hiwoodblock 4 lowoodblock lowoodblock lowoodblock
-	}
+	hiwoodblock 4 lowoodblock lowoodblock lowoodblock
 }
 
 

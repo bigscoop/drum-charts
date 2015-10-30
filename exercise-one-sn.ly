@@ -52,6 +52,14 @@ snarePattern = {
 	}
 }
 
+bdPattern = {
+	\drummode {
+		\repeat unfold 156 { bd4 }
+		\scaleDurations 2/3 { bd8*2 bd4 s8 bd8 s2 s4 }
+	}
+	
+}
+
 outPDF = \drummode
 {
 	<<
@@ -68,9 +76,7 @@ outPDF = \drummode
 
 		\new DrumVoice {
 			\voiceFour
-			\repeat unfold 156 { bd4 }
-			\scaleDurations 2/3 { bd8*2 bd4 s8 bd8 s2 s4 }
-			
+			\bdPattern
 		}
 	>>
 }
@@ -89,10 +95,10 @@ outMidi = \drummode
 
 		}
 
-%		\new DrumVoice {
-%			\voiceFour
-%			\repeat unfold 48 { bd4 }
-%		}
+		\new DrumVoice {
+			\voiceFour
+			\bdPattern
+		}
 	>>
 }
 
