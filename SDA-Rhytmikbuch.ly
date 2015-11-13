@@ -18,7 +18,7 @@ snarePatternTwelve = {
 		\break
 		r1 r8 sn8 r8 sn8 r8 sn8 r8 sn8 |  sn8 sn8 sn2 r8 sn8 | r4 sn8 sn8 r8 sn8 sn8 sn8 |
 		\break
-		r8 sn8 sn8 sn8 sn8 sn8 sn8 sn8 | sn2 r4 sn8 sn8 | sn8 sn8 sn8 sn8 sn8 sn8 r8 sn8 | s1 |
+		r8 sn8 sn8 sn8 sn8 sn8 sn8 sn8 | sn2 r4 sn8 sn8 | sn8 sn8 sn8 sn8 sn8 sn8 r8 sn8 | sn1 |
 		\break
 		sn8 sn8 sn8 sn8 r8 sn8 sn4 | sn8 sn8 r4 r4 r8 sn8 | sn2 r8 sn8 sn4 | r4 sn8 sn8 r2 |
 		\break
