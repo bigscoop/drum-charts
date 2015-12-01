@@ -1,3 +1,6 @@
+%TODO: использовать тэги, чтобы фильтровать содержимое для midi
+%разбить на маленькие части, возможно вложить по папкам, как по разделам
+
 \version "2.18.2"
 
 \include "common-defs.ly"
@@ -14,7 +17,7 @@
 
 snarePatternTwelve = {
 	\drummode {
-		r8 sn8 sn8 sn8 sn2 | sn4 sn8 sn8 r8 sn8 sn8 sn8 | r8 sn8 sn8 sn8 sn8 sn8 r8 sn8 | r4 sn8 sn8 r4 r8 sn8 
+		r8 sn8 sn8 sn8 sn2 | sn4 sn8 sn8 r8 sn8 sn8 sn8 | r8 sn8 sn8 sn8 sn8 sn8 r8 sn8 | r4 sn8 sn8 r4 r8 sn8
 		\break
 		r1 r8 sn8 r8 sn8 r8 sn8 r8 sn8 |  sn8 sn8 sn2 r8 sn8 | r4 sn8 sn8 r8 sn8 sn8 sn8 |
 		\break
@@ -32,7 +35,7 @@ snarePatternTwelve = {
 		\break
 		sn2 sn8 sn8 r8 sn8 | sn4 sn4 r8 sn8 r4 | sn8 sn8 sn8 sn8 r4 sn8 sn8 | sn8 sn8 r4 sn8 sn8 r8 sn8 |
 		\break
-		sn8 sn8 sn8 sn8 r8 sn8 sn8 sn8 | sn1 | sn4 r8 sn8 sn8 sn8 sn8 sn8 | sn8 sn8 r8 sn8 sn2|      
+		sn8 sn8 sn8 sn8 r8 sn8 sn8 sn8 | sn1 | sn4 r8 sn8 sn8 sn8 sn8 sn8 | sn8 sn8 r8 sn8 sn2|
 	}
 }
 
@@ -56,8 +59,8 @@ snarePatternThirteen = {
 		\break
 		sn8 sn8 sn8 sn8 sn4 r4 | r8 sn8 sn8 sn8 sn8 sn8 r8 sn8 | r8 sn8 r8 sn8 r8 sn8 r4 | sn8 sn8 sn8 sn8 sn8 sn8 sn8 sn8 |
 		\break
-		sn8 sn8 r8 sn8 r2 | r4 r8 sn8 r8 sn8 r8 sn8 | r1 | sn8 sn8 sn8 sn8 r8 sn8 sn4 | 
-		      
+		sn8 sn8 r8 sn8 r2 | r4 r8 sn8 r8 sn8 r8 sn8 | r1 | sn8 sn8 sn8 sn8 r8 sn8 sn4 |
+
 	}
 }
 
@@ -80,7 +83,7 @@ snarePatternFourteen = {
 		sn8 sn4 sn8 r8 sn8 sn8 sn8 | r8 sn8 sn8 sn8 r8 sn4 sn8 | sn8 sn4 sn8 r4 r8 sn8 | sn8 sn8 sn2 sn8 sn8 |
 		\break
 		r1 | r8 sn4 sn8 sn8 sn4 sn8 | sn8 sn8 sn2 r8 sn8 | sn8  sn4 sn8 sn8 sn8 r8 sn8 |
-		\break 
+		\break
 	}
 }
 
@@ -114,7 +117,7 @@ bdPattern = {
 		\repeat unfold 156 { bd4 }
 		\scaleDurations 2/3 { bd8*2 bd4 s8 bd8 s2 s4 }
 	}
-	
+
 }
 
 outPDFAchtelNoten = \drummode
@@ -128,14 +131,14 @@ outPDFAchtelNoten = \drummode
 
 	\pageBreak
 
-	\set Score.currentBarNumber = 1 	
+	\set Score.currentBarNumber = 1
 	\new DrumVoice {
 		\voiceTwo
 		\snarePatternThirteen
 	}
-	
+
 	\pageBreak
-	
+
 }
 
 outPDFSynkopen = \drummode
@@ -149,18 +152,18 @@ outPDFSynkopen = \drummode
 
 	\pageBreak
 
-	\set Score.currentBarNumber = 1 	
+	\set Score.currentBarNumber = 1
 	\new DrumVoice {
 		\voiceTwo
 		\snarePatternFifteen
 	}
-	
+
 }
 
 
 \book {
 	\bookpart {
-		
+
 		\header
 		{
 			title="SDA Rhytmikbuch"
@@ -176,7 +179,7 @@ outPDFSynkopen = \drummode
 				\outPDFAchtelNoten
 				\bar "|."
 			}
-		
+
 			\layout
 			{
 		%    \set countPercentRepeats = ##t
@@ -199,7 +202,7 @@ outPDFSynkopen = \drummode
 					\outPDFSynkopen
 					\bar "|."
 				}
-			
+
 				\layout
 				{
 			%    \set countPercentRepeats = ##t

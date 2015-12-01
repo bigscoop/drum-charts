@@ -12,7 +12,13 @@ swingRideBar = \drummode
 
 dora = \drummode
 {
+	\override NoteHead.color = #yellow
+	\override Stem.color = #yellow
+	\override Beam.color = #yellow
 	sn16 sn8 sn16
+	\override NoteHead.color = #black
+	\override Stem.color = #black
+	\override Beam.color = #black
 }
 
 swingMarkup = \mark \markup {
