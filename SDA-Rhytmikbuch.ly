@@ -84,6 +84,31 @@ snarePatternFourteen = {
 	}
 }
 
+snarePatternFifteen = {
+	\drummode {
+		sn8 sn8 sn4 sn8 sn4 sn8 | sn8 sn4 sn8 sn8 sn4 sn8 | r4 sn8 sn8 sn8 sn4 sn8 | sn2 sn8 sn4 sn8 |
+		\break
+		r2 sn4 r4 | sn8 sn8 sn2 sn8 sn8 | r8 sn4 sn4 sn4 sn8 | r8 sn4 sn8 sn8 sn8 r4 |
+		\break
+		sn8 sn4 sn8 r8 sn4 sn8 | r8 sn8 sn2 sn8 sn8 | sn4 sn4 sn8 sn4 sn8 | sn1 |
+		\break
+		sn8 sn8 sn8 sn8 sn8 sn4 sn8 | sn8 sn4 sn8 r4 r8 sn8 | r8 sn4 sn8 sn8 sn4 sn8 | sn8 sn4 sn4 sn4 sn8 |
+		\break
+		sn8 sn4 sn4 sn4 sn8 | r8 sn4 sn8 sn8 sn8 r8 sn8 | sn8 sn8 sn2 r4 | r8 sn8 sn4 r8 sn8 r8 sn8 |
+		\break
+		r8 sn8 r4 r8 sn4 r8 | sn8 sn8 r4 r8 sn8 r4 | r8 sn8 r4 r4 r8 sn8 | r2 r8 sn8 sn4 |
+		\break
+		sn8 sn4 sn8 sn8 sn4 sn8 | sn4 sn4 sn8 sn4 sn8 | sn8 sn8 r4 r4 r8 sn8 | r8 sn8 sn4 r2 |
+		\break
+		sn8 sn8 sn8 sn8 r8 sn4 sn8 | sn8 sn4 sn4 sn8 sn8 sn8 | r4 sn8 sn8 sn4 sn8 sn8 | r8 sn8 sn8 sn8 sn8 sn4 sn8 |
+		\break
+		sn2 sn2 | sn8 sn 4 sn8 r8 r4 sn8 | r8 sn4 sn8 sn8 sn4 sn8 | sn1
+		\break
+		r8 sn8 sn4 sn8 sn4 sn8 | r8 sn8 sn2 r8 sn8 | sn8 sn4 sn8 r8 sn8 sn8 sn8 | sn8 sn8 r4 sn2
+		\break
+	}
+}
+
 bdPattern = {
 	\drummode {
 		\repeat unfold 156 { bd4 }
@@ -127,7 +152,7 @@ outPDFSynkopen = \drummode
 	\set Score.currentBarNumber = 1 	
 	\new DrumVoice {
 		\voiceTwo
-		\snarePatternFourteen
+		\snarePatternFifteen
 	}
 	
 }
@@ -269,6 +294,38 @@ outPDFSynkopen = \drummode
 							\new DrumVoice {
 								\voiceTwo
 								\snarePatternFourteen
+							}
+						>>
+					}
+				}
+			}
+			\midi {
+			}
+		}
+	}
+}
+
+\book {
+	\bookOutputSuffix "15"
+	\bookpart {
+		\score
+		{
+			\unfoldRepeats
+			{
+				\drums
+				{
+					\tempo 4=100
+					\ticktock
+					\drummode
+					{
+						<<
+							\new DrumVoice {
+								\voiceOne
+								\repeat unfold 40 { \ticktock }
+							}
+							\new DrumVoice {
+								\voiceTwo
+								\snarePatternFifteen
 							}
 						>>
 					}
