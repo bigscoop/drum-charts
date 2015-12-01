@@ -10,7 +10,10 @@ swingRideBar = \drummode
 	cymr4 \scaleDurations 2/3 { cymr8*2 cymr8 } cymr4 \scaleDurations 2/3 { cymr8*2 cymr8 }
 }
 
-
+dora = \drummode
+{
+	sn16 sn8 sn16
+}
 
 swingMarkup = \mark \markup {
 	\hspace #15
