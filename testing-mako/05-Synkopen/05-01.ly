@@ -12,11 +12,13 @@
 	composer = "Swiss Drum Academy"
 	piece = \markup { \char ##x266B "05-01" }
 }
+
+\tocItem \markup "05. Synkopen"
+
 % endif
 
 % if section=='body':
 \include "../common/common-defs.ily"
-
 snarePattern = {
 	\drummode {
 		sn4 sn2 sn4 | sn8 sn4 sn4 sn4 sn8 | sn8 sn4 sn8 sn8 sn4 sn8 | sn8 sn8 sn8 sn8 sn4 r4 |

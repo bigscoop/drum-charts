@@ -12,6 +12,9 @@
 	composer = "Swiss Drum Academy"
 	piece = \markup { \char ##x266B "04-01" }
 }
+
+\tocItem \markup "04. Achtel Noten"
+
 % endif
 
 % if section=='body':

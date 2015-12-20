@@ -5,7 +5,7 @@
 
 % if section=='body':
 \paper {
-	first-page-number = #14
+	first-page-number = #7
 	print-page-number = ##t
 	print-first-page-number = ##t
 	oddHeaderMarkup = \markup {
@@ -23,5 +23,8 @@
 		}
 	}
 	evenFooterMarkup = \oddFooterMarkup
+	tocItemMarkup = \tocItemWithDotsMarkup
 }
+\markuplist \table-of-contents
+\pageBreak
 % endif
