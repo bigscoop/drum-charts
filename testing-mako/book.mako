@@ -1,6 +1,6 @@
 \version "2.18.2"
 
-
+\pointAndClickOff
 
 % for i, current_file in enumerate(list):
 %% ${current_file}
