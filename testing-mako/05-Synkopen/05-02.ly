@@ -120,38 +120,8 @@ snarePatternFifteen = {
 	}
 }
 
-bdPattern = {
-	\drummode {
-		\repeat unfold 156 { bd4 }
-		\scaleDurations 2/3 { bd8*2 bd4 s8 bd8 s2 s4 }
-	}
-
-}
-
-outPDFAchtelNoten = \drummode
-{
-	\set Score.barNumberVisibility = #all-bar-numbers-visible
-	\new DrumVoice {
-		\voiceTwo
-		\snarePatternTwelve
-
-	}
-
-	\pageBreak
-
-	\set Score.currentBarNumber = 1
-	\new DrumVoice {
-		\voiceTwo
-		\snarePatternThirteen
-	}
-
-	\pageBreak
-
-}
-
 outPDFSynkopen = \drummode
 {
-	\set Score.barNumberVisibility = #all-bar-numbers-visible
 	\new DrumVoice {
 		\voiceTwo
 		\snarePatternFifteen
