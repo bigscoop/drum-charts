@@ -5,18 +5,21 @@
 
 % if section=='body':
 \paper {
-	first-page-number = #14 print-page-number = ##t print-first-page-number = ##t
+	first-page-number = #14
+	print-page-number = ##t
+	print-first-page-number = ##t
 	oddHeaderMarkup = \markup {
 		\fill-line \smaller \italic {
-			\fromproperty #' header:title \fromproperty #' header:subtitle
+			\fromproperty #' header:title
+			\fromproperty #' header:subtitle
 		}
 	}
 	evenHeaderMarkup = \oddHeaderMarkup
 
 	oddFooterMarkup = \markup {
 		\fill-line {
-			\on-the-fly \print-page-number-check-first \fromproperty #'
-			page:page-number-string
+			\on-the-fly \print-page-number-check-first
+				\fromproperty #'page:page-number-string
 		}
 	}
 	evenFooterMarkup = \oddFooterMarkup

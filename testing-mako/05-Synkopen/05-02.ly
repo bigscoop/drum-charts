@@ -1,10 +1,5 @@
 %%{ <%page args='section'/> %%}
 
-
-
-%%TODO: использовать тэги, чтобы фильтровать содержимое для midi
-%%разбить на маленькие части, возможно вложить по папкам, как по разделам
-
 % if section=='version':
 \version "2.18.2"
 % endif
@@ -12,19 +7,21 @@
 % if section=='header':
 \header
 {
-	title="SDA Rhytmikbuch"
-	subtitle="Synkopen"
-	composer="Swiss Drum Academy"
-	piece = \markup { \char ##x266B "05-01" }
+	title = "SDA Rhytmikbuch"
+	subtitle = "Synkopen"
+	composer = "Swiss Drum Academy"
+	piece = \markup { \char ##x266B "05-02" }
 }
 % endif
 
 % if section=='body':
-\include "common-defs.ly"
+\include "../common/common-defs.ily"
 
 \layout {
 	indent = 0
 }
+
+
 
 snarePatternTwelve = {
 	\drummode {
@@ -157,7 +154,7 @@ outPDFSynkopen = \drummode
 	\set Score.barNumberVisibility = #all-bar-numbers-visible
 	\new DrumVoice {
 		\voiceTwo
-		\snarePatternFourteen
+		\snarePatternFifteen
 		\pageBreak
 	}
 }
@@ -198,7 +195,7 @@ outPDFSynkopen = \drummode
 							}
 							\new DrumVoice {
 								\voiceTwo
-								\snarePatternFourteen
+								\snarePatternFifteen
 							}
 						>>
 					}
