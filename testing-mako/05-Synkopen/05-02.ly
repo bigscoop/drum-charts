@@ -17,85 +17,7 @@
 % if section=='body':
 \include "../common/common-defs.ily"
 
-\layout {
-	indent = 0
-}
-
-
-
-snarePatternTwelve = {
-	\drummode {
-		r8 sn8 sn8 sn8 sn2 | sn4 sn8 sn8 r8 sn8 sn8 sn8 | r8 sn8 sn8 sn8 sn8 sn8 r8 sn8 | r4 sn8 sn8 r4 r8 sn8
-		\break
-		r1 r8 sn8 r8 sn8 r8 sn8 r8 sn8 |  sn8 sn8 sn2 r8 sn8 | r4 sn8 sn8 r8 sn8 sn8 sn8 |
-		\break
-		r8 sn8 sn8 sn8 sn8 sn8 sn8 sn8 | sn2 r4 sn8 sn8 | sn8 sn8 sn8 sn8 sn8 sn8 r8 sn8 | sn1 |
-		\break
-		sn8 sn8 sn8 sn8 r8 sn8 sn4 | sn8 sn8 r4 r4 r8 sn8 | sn2 r8 sn8 sn4 | r4 sn8 sn8 r2 |
-		\break
-		sn8 sn8 sn4 sn4 sn4 | sn2 r8 sn8 sn8 sn8 | r8 sn8 sn4 sn4 sn8 sn8 | sn8 sn8 sn8 sn8 r8 sn8 r8 sn8 |
-		\break
-		sn8 sn8 sn8 sn8 r8 sn8 r8 sn8 | sn1 | sn8 sn8  sn2 r8 sn8 | sn8 sn8 sn4 r8 sn8 sn8 sn8 |
-		\break
-		sn2 sn8 sn8 r8 sn8 | sn8 sn8 sn4 r4 r8 sn8 | sn8 sn8 sn8 sn8 r2 | sn8 sn8 r8 sn8 sn8 sn8  r4 |
-		\break
-		r8 sn8 r4 r8 sn8 r8 sn8 | r1 | r8 sn8 sn8 sn8 sn8 sn8 sn8 sn8 | r2 r8 sn8 sn4 |
-		\break
-		sn2 sn8 sn8 r8 sn8 | sn4 sn4 r8 sn8 r4 | sn8 sn8 sn8 sn8 r4 sn8 sn8 | sn8 sn8 r4 sn8 sn8 r8 sn8 |
-		\break
-		sn8 sn8 sn8 sn8 r8 sn8 sn8 sn8 | sn1 | sn4 r8 sn8 sn8 sn8 sn8 sn8 | sn8 sn8 r8 sn8 sn2|
-	}
-}
-
-snarePatternThirteen = {
-	\drummode {
-		sn4 r4 r4 sn8 sn8 | sn8 sn8 r8 sn8 r8 sn8 sn4 | r8 sn8 r8 sn8 sn8 sn8 r8 sn8 | sn2 r4 r8 sn8 |
-		\break
-		sn8 sn8 sn8 sn8 sn8 sn8 sn8 sn8 | r8 sn8 sn8 sn8 sn8 sn8 sn8 sn8 | sn8 sn8 r8 sn8 r4 sn8 sn8 | r8 sn8 sn8 sn8 sn2 |
-		\break
-		sn8 sn8 sn2 r8 sn8 | r8 sn8 sn8 sn8 r2 | sn1 | sn8 sn8 r8 sn8 sn8 sn8 r8 sn8 |
-		\break
-		sn8 sn8 sn8 sn8 r8 sn8 r4 | r8 sn8 r8 sn8 sn8 sn8 sn4 | sn4 sn4 sn8 sn8 sn8 sn8 | r2 sn8 sn8 sn4 |
-		\break
-		sn8 sn8 sn8 sn8 r8 sn8 sn8 sn8 | r8 sn8 sn4 sn4 r8 sn8 | sn8 sn8 sn4 r8 sn8 r4 | r2 r8 sn8 sn8 sn8 |
-		\break
-		sn2 r2 | r8 sn8 sn8 sn8 sn8 sn8 sn8 sn8 | sn4 r8 sn8 sn8 sn8 sn8 sn8 | r8 sn8 sn8 sn8 r8 sn8 r4 |
-		\break
-		sn1 | sn8 sn8 r8 sn8 sn4 sn4 | sn4 sn4 r8 sn8 sn8 sn8 | sn2 r8 sn8 r8 sn8 |
-		\break
-		sn8 sn8 r4 sn8 sn8 sn4 | r4 r8 sn8 sn8 sn8 r8 sn8 | sn8 sn8 sn8 sn8 sn8 sn8 sn4 | r8 sn8 sn2 r8 sn8 |
-		\break
-		sn8 sn8 sn8 sn8 sn4 r4 | r8 sn8 sn8 sn8 sn8 sn8 r8 sn8 | r8 sn8 r8 sn8 r8 sn8 r4 | sn8 sn8 sn8 sn8 sn8 sn8 sn8 sn8 |
-		\break
-		sn8 sn8 r8 sn8 r2 | r4 r8 sn8 r8 sn8 r8 sn8 | r1 | sn8 sn8 sn8 sn8 r8 sn8 sn4 |
-
-	}
-}
-
-snarePatternFourteen = {
-	\drummode {
-		sn4 sn2 sn4 | sn8 sn4 sn4 sn4 sn8 | sn8 sn4 sn8 sn8 sn4 sn8 | sn8 sn8 sn8 sn8 sn4 r4 |
-		\break
-		sn2 r8 sn8 sn8 sn8 | sn8 sn4 sn4 sn4 sn8 | sn8 sn8 sn2 r8 sn8 | sn8 sn8 sn4 sn8 sn8 r8 sn8 |
-		\break
-		sn8 sn8 r8 sn8 sn8 sn4 sn8 | sn1 | sn8 sn8 sn8 sn8 sn8 sn4 sn8 | sn8 sn8 r4 r8 sn4 sn8 |
-		\break
-		sn4 sn2 sn4 | r8 sn8 sn2 r8 sn8 | r2 sn8 sn8 sn8 sn8 | sn4 sn8 sn8 sn8 sn4 sn8 |
-		\break
-		sn2 r8 sn8 r8 sn8 | sn8 sn8 r4 sn2 | sn8 sn8 sn8 sn8 r4 r8 sn8 | sn8 sn8 sn2 r8 sn8 |
-		\break
-		sn8 sn4 sn8 r8 sn4 sn8 | sn8 sn8 sn8 sn8 sn8 sn8 sn8 sn8 | sn8 sn8 r4 r2 | sn2 sn8 sn8 r8 sn8 |
-		\break
-		sn8 sn4 sn4 sn8 sn8 sn8 | sn8 sn8 r4 r2 | sn1 | sn8 sn8 sn8 sn8 r8 sn8 r8 sn8 |
-		\break
-		sn8 sn4 sn8 r8 sn8 sn8 sn8 | r8 sn8 sn8 sn8 r8 sn4 sn8 | sn8 sn4 sn8 r4 r8 sn8 | sn8 sn8 sn2 sn8 sn8 |
-		\break
-		r1 | r8 sn4 sn8 sn8 sn4 sn8 | sn8 sn8 sn2 r8 sn8 | sn8  sn4 sn8 sn8 sn8 r8 sn8 |
-		\break
-	}
-}
-
-snarePatternFifteen = {
+snarePattern = {
 	\drummode {
 		sn8 sn8 sn4 sn8 sn4 sn8 | sn8 sn4 sn8 sn8 sn4 sn8 | r4 sn8 sn8 sn8 sn4 sn8 | sn2 sn8 sn4 sn8 |
 		\break
@@ -120,58 +42,51 @@ snarePatternFifteen = {
 	}
 }
 
-outPDFSynkopen = \drummode
-{
-	\new DrumVoice {
-		\voiceTwo
-		\snarePatternFifteen
-		\pageBreak
-	}
-}
-
 % endif
+
 
 % if section=='bookpart-contents':
 
-		\score {
-			\drums {
-					\outPDFSynkopen
-					\bar "|."
-				}
-
-				\layout
-				{
-			}
+\score {
+	\drums {
+		\new DrumVoice {
+			\voiceTwo
+			\snarePattern
+			\pageBreak
 		}
+	}
+
+	\layout { }
+}
 
 % endif
 
 % if section=='midi':
 
-		\score
+\score
+{
+	\unfoldRepeats
+	{
+		\drums
 		{
-			\unfoldRepeats
+			\tempo 4=100
+			\ticktock
+			\drummode
 			{
-				\drums
-				{
-					\tempo 4=100
-					\ticktock
-					\drummode
-					{
-						<<
-							\new DrumVoice {
-								\voiceOne
-								\repeat unfold 36 { \ticktock }
-							}
-							\new DrumVoice {
-								\voiceTwo
-								\snarePatternFifteen
-							}
-						>>
+				<<
+					\new DrumVoice {
+						\voiceOne
+						\repeat unfold 36 { \ticktock }
 					}
-				}
-			}
-			\midi {
+					\new DrumVoice {
+						\voiceTwo
+						\snarePattern
+					}
+				>>
 			}
 		}
+	}
+	\midi {
+	}
+}
 % endif

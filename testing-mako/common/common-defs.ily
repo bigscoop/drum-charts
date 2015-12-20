@@ -1,5 +1,9 @@
 \version "2.18.2"
 
+\layout {
+	indent = 0
+}
+
 ticktock = \drummode {
 	hiwoodblock 4 lowoodblock lowoodblock lowoodblock
 }
