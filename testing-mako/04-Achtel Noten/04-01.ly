@@ -8,7 +8,7 @@
 \header
 {
 	title = "SDA Rhytmikbuch"
-	subtitle = "Achtel Noten"
+	subtitle = "04. Achtel Noten"
 	composer = "Swiss Drum Academy"
 	piece = \markup { \char ##x266B "04-01" }
 }
