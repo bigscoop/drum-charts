@@ -3,10 +3,11 @@
 
 
 % for i, current_file in enumerate(list):
+%% ${current_file}
 <%include file="${current_file}" args="section='body'"/>
 \bookpart {
 
-% if i > 1:
+% if not current_file.endswith("01.ly"):
 \paper { bookTitleMarkup = \markup { \vspace #2 } }
 % endif
 
