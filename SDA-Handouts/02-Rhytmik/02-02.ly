@@ -35,24 +35,24 @@ ostinatis = {
 		\repeat unfold 2 { hh8 hh8 <<hh8 sn8>> hh8 }   
 		\break 
 		\mark \markup { \hspace #15 \bold "Beispiel B" }
-		<<bd4 cymc4>> r8 bd8 bd4 r8 bd8 | bd8 bd8 r4 r8 bd8 r4 |
+		<<bd8 cymc>> hh <<hh sn>> <<hh bd>> <<hh bd>> hh <<hh sn>> <<hh bd>> | 
+		<<hh bd>> <<hh bd>> <<hh sn>> hh hh <<hh bd>> <<hh sn>> hh |
 		\break
 
 		\mark \markup { \hspace #15 \box \bold "Ostinato C" }
-		\repeat unfold 8 { sn16^"R" sn16^"L" }   
+		r8 hh sn hh r hh sn hh |    
 		\break 
 		\mark \markup { \hspace #15 \bold "Beispiel C" }
-		sn16 sn16 sn16-> sn16 sn16-> sn16 sn16 sn16 sn16-> sn16 sn16 sn16 sn16 sn16 sn16-> sn16 |
-		sn16 sn16 sn16 sn16 sn16-> sn16 sn16 sn16 sn16 sn16 sn16 sn16 sn16-> sn16 sn16 sn16 |  
+		<<bd8 cymc>> hh sn <<hh bd>> bd hh sn <<hh bd>> | 
+		bd <<hh bd>> sn hh r <<hh bd>> sn hh |
 		\break
 
 		\mark \markup { \hspace #15 \box \bold "Ostinato D" }
-		\tuplet 3/2 { sn8_"R" sn8_"L" sn8_"R" } \tuplet 3/2 { sn8_"L" sn8_"R" sn8_"L" }    
-		\tuplet 3/2 { sn8_"R" sn8_"L" sn8_"R" } \tuplet 3/2 { sn8_"L" sn8_"R" sn8_"L" }    
+		\repeat unfold 2 { hh16^"R" hh16^"L" hh16^"R" hh16^"L" sn16^"R" hh16^"L" hh16^"R" hh16^"L" }   
 		\break 
 		\mark \markup { \hspace #15 \bold "Beispiel D" }
-		\tuplet 3/2 { sn8 sn8 sn8-> } \tuplet 3/2 { sn8-> sn8 sn8 } \tuplet 3/2 { sn8-> sn8 sn8 } \tuplet 3/2 { sn8 sn8 sn8 } |
-		\tuplet 3/2 { sn8 sn8 sn8 } \tuplet 3/2 { sn8-> sn8 sn8 } \tuplet 3/2 { sn8 sn8 sn8 } \tuplet 3/2 { sn8-> sn8 sn8 }   
+		<<cymc16 bd>> hh hh hh sn hh <<hh bd>> hh <<hh bd>> hh hh hh sn hh <<hh bd>> hh |
+		<<hh bd>> hh <<hh bd>> hh sn hh hh hh hh hh <<hh bd>> hh sn hh hh hh |
 		\break
 	}
 }
