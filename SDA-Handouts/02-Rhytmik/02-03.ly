@@ -20,6 +20,40 @@
 % if section=='body':
 \include "../common/common-defs.ily"
 
+ostinatis = {
+	\drummode {
+		\mark \markup { \hspace #15 \box \bold "Ostinato A" }
+		\repeat unfold 4 { sn8^"R" sn8^"L" }   
+		\break 
+		\mark \markup { \hspace #15 \bold "Beispiel A" }
+		sn8 sn8-> sn8-> sn8 sn8-> sn8 sn8 sn8-> | sn8 sn8 sn8-> sn8 sn8 sn8 sn8-> sn8 |  
+		\break
+
+		\mark \markup { \hspace #15 \box \bold "Ostinato B" }
+		\repeat unfold 4 { sn8:16^"RR" sn8:16^"LL" } 
+		\break 
+		\mark \markup { \hspace #15 \bold "Beispiel B" }
+		sn16 sn16 sn8-> sn8-> sn16 sn16 sn8-> sn16 sn16 sn16 sn16 sn8-> | sn16 sn16 sn16 sn16 sn8-> sn16 sn16 sn16 sn16 sn16 sn16 sn8-> sn16 sn16 |  
+		\break
+
+		\mark \markup { \hspace #15 \box \bold "Ostinato C" }
+		\repeat unfold 8 { sn16^"R" sn16^"L" }   
+		\break 
+		\mark \markup { \hspace #15 \bold "Beispiel C" }
+		sn16 sn16 sn16-> sn16 sn16-> sn16 sn16 sn16 sn16-> sn16 sn16 sn16 sn16 sn16 sn16-> sn16 |
+		sn16 sn16 sn16 sn16 sn16-> sn16 sn16 sn16 sn16 sn16 sn16 sn16 sn16-> sn16 sn16 sn16 |  
+		\break
+
+		\mark \markup { \hspace #15 \box \bold "Ostinato D" }
+		\tuplet 3/2 { sn8_"R" sn8_"L" sn8_"R" } \tuplet 3/2 { sn8_"L" sn8_"R" sn8_"L" }    
+		\tuplet 3/2 { sn8_"R" sn8_"L" sn8_"R" } \tuplet 3/2 { sn8_"L" sn8_"R" sn8_"L" }    
+		\break 
+		\mark \markup { \hspace #15 \bold "Beispiel D" }
+		\tuplet 3/2 { sn8 sn8 sn8-> } \tuplet 3/2 { sn8-> sn8 sn8 } \tuplet 3/2 { sn8-> sn8 sn8 } \tuplet 3/2 { sn8 sn8 sn8 } |
+		\tuplet 3/2 { sn8 sn8 sn8 } \tuplet 3/2 { sn8-> sn8 sn8 } \tuplet 3/2 { sn8 sn8 sn8 } \tuplet 3/2 { sn8-> sn8 sn8 }   
+		\break
+	}
+}
 
 snarePattern = {
 	\drummode {
@@ -49,6 +83,8 @@ snarePattern = {
 	\drums {
 		\new DrumVoice {
 			\voiceOne
+			\ostinatis
+			\pageBreak
 			\snarePattern
 			\pageBreak
 		}
