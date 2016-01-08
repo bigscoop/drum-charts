@@ -4,7 +4,9 @@
 from mako.template import Template
 from mako.lookup import TemplateLookup
 from shlex import shlex
+from waflib import Logs
 import pipes
+import os
 
 APPNAME = 'SDA Rhytmikbuch'
 VERSION = '0.1'
@@ -13,24 +15,11 @@ top = '.'
 out = 'out'
 
 def configure(ctx):
-        print('→ configuring the project in ' + ctx.path.abspath())
-        print('→ configuring the project in ' + ctx.srcnode.abspath())
+        Logs.info('Configuring the project in ' + ctx.path.abspath())
         ctx.find_program('lilypond', var='LILYPOND')
         
-        ctx.env['CFLAGS'] = ['-g']
-        ctx.env.CFLAGS = ['-g']
-        ctx.env.append_value('CXXFLAGS', ['-O2', '-g'])
-        ctx.env.append_unique('CFLAGS', ['-g', '-O2'])
-        ctx.env.prepend_value('CFLAGS', ['-O3'])
-
-        print(type(ctx.env))
-        print(ctx.env)
-        print(ctx.env.get_flat('CFLAGS'))
 
 def build(bld):
-	from mako.template import Template
-	from mako.lookup import TemplateLookup
-	import os
 	
 	basedir = top
 	
@@ -44,29 +33,33 @@ def build(bld):
 			if file.endswith(".ly") and not file.endswith("out.ly"):
 				relpath = os.path.relpath(root, basedir)
 				lyfiles.append(os.path.join(relpath,file))
+				
+				# build every single file
 				compile_single_ly = list(bld.env.LILYPOND)
-				compile_single_ly.extend(['-o', pipes.quote(os.path.join(bld.bldnode.abspath(),file)), pipes.quote(os.path.normpath(os.path.join(root,file)))])
+				compile_single_ly.extend(['-I', pipes.quote(bld.srcnode.abspath())])
+				compile_single_ly.extend([pipes.quote(os.path.normpath(os.path.join(root,file)))])
 				compile_single_ly = ' '.join(map(str, compile_single_ly))
+				bld(rule=compile_single_ly, shell=True)
+	
 
-#				bld(rule=compile_single_ly, shell=True)
-	
-	
+	# render all collected files in one book	
 	mylookup = TemplateLookup(directories=[basedir], input_encoding='utf-8')
-	
 	mytemplate = mylookup.get_template('book.mako')
 	rendered = mytemplate.render(list=lyfiles)
 	
+	# save book as out.ly
 	book_py_filename = pipes.quote(os.path.join(basedir, os.path.join(bld.bldnode.abspath(), 'out.ly')))
 	file_ = open(book_py_filename, 'w')
 	file_.write(rendered)
 	file_.close()
+
 	lyfiles.sort()
-	print(lyfiles)
-	
+	Logs.info("Collected following files %s" % lyfiles)
+
+	# build the book	
 	compile_single_ly = list(bld.env.LILYPOND)
 	compile_single_ly.extend(['-I', pipes.quote(bld.bldnode.abspath())])
-	compile_single_ly.extend(['--output=' + pipes.quote(os.path.join(bld.bldnode.abspath()))+'/', book_py_filename])
-	print(' '.join(map(str, compile_single_ly)))
+	compile_single_ly.extend([book_py_filename])
 	compile_single_ly = ' '.join(map(str, compile_single_ly))
 	bld(rule=compile_single_ly, shell=True)
 
