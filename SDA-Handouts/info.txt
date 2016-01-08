@@ -1,0 +1,2 @@
+building:
+python waf clean configure build
