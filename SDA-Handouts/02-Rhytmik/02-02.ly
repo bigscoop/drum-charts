@@ -10,7 +10,7 @@
 	title = "SDA Handouts"
 	subtitle = "02-02. Bassdrum part"
 	composer = "Swiss Drum Academy"
-	piece = \markup { \char ##x266B "02-02" }
+	piece = \markup { "from EYS Stufe 6, p. 52" }
 }
 
 \tocItem \markup "Bassdrum part"

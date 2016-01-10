@@ -10,7 +10,7 @@
 	title = "SDA Handouts"
 	subtitle = "02-03. Snare Betonungen"
 	composer = "Swiss Drum Academy"
-	piece = \markup { \char ##x266B "02-03" }
+	piece = \markup { "from EYS Stufe 6, p. 54" }
 }
 
 \tocItem \markup "Snare Betonungen"
