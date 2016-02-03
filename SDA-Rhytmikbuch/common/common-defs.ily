@@ -20,9 +20,52 @@ dora = \drummode
 	\override Stem.color = #yellow
 	\override Beam.color = #yellow
 	sn16 sn8 sn16
-	\override NoteHead.color = #black
-	\override Stem.color = #black
-	\override Beam.color = #black
+	\revert NoteHead.color
+	\revert Stem.color
+	\revert Beam.color
+}
+
+ora = \drummode
+{
+	\override Rest.color = #darkyellow
+	\override NoteHead.color = #darkyellow
+	\override Stem.color = #darkyellow
+	\override Beam.color = #darkyellow
+	r16 sn8 sn16
+	\revert Rest.color
+	\revert NoteHead.color
+	\revert Stem.color
+	\revert Beam.color
+}
+
+ra = \drummode
+{
+	\override Dots.color = #magenta
+	\override Rest.color = #magenta
+	\override NoteHead.color = #magenta
+	\override Stem.color = #magenta
+	\override Beam.color = #magenta
+	r8. sn16
+	\revert Dots.color
+	\revert Rest.color
+	\revert NoteHead.color
+	\revert Stem.color
+	\revert Beam.color
+}
+
+brd = \drummode
+{
+	\override Dots.color = #cyan
+	\override Rest.color = #cyan
+	\override NoteHead.color = #cyan
+	\override Stem.color = #cyan
+	\override Beam.color = #cyan
+	sn8. sn16
+	\revert Dots.color
+	\revert Rest.color
+	\revert NoteHead.color
+	\revert Stem.color
+	\revert Beam.color
 }
 
 swingMarkup = \mark \markup {
