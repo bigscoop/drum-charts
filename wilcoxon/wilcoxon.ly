@@ -23,6 +23,26 @@ ticktock = \drums {
   }
 }
 
+ticktockIII = \drums {
+  \tempo 4=\currentTempo
+
+  \drummode {
+    \partial 2. hiwoodblock 8 lowoodblock lowoodblock
+  }
+}
+
+
+flam =
+#(define-music-function (parser location music)(ly:music?)
+   #{
+     \acciaccatura { 16 } $music
+   #})
+
+drag =
+#(define-music-function (parser location music)(ly:music?)
+   #{
+     \acciaccatura { 16 16 } $music
+   #})
 
 soloI = \drummode
 {
@@ -31,7 +51,8 @@ soloI = \drummode
     \new DrumVoice {
       \voiceTwo
 
-
+      \partial 8 \repeat tremolo 4 sn32_"L"^"7 str."
+      % sn4:32
       \stemUp
       \repeat volta 2 {
         \acciaccatura sn16( \stemUp sn8_"R")^> sn_"R"
@@ -96,7 +117,54 @@ soloI = \drummode
 }
 
 
+soloII = \drums {
+  \time 2/4
+  <<
+    \new DrumVoice {
 
+      \voiceOne
+      \slurDown
+      %  \stemDown
+
+      \partial 8 sn16_"R" sn16_"L"
+
+
+
+      \repeat volta 2 {
+
+        sn8_"R"^> sn16_"L" sn_"R" sn_"L" sn_"R" sn_"L" sn_"R"
+        sn8_"L"^> sn16_"R" sn_"L" sn8_"R"^> sn16_"L" sn_"R"
+        sn8_"L"^> sn16_"R" sn_"L" sn_"R" sn_"L"^> sn_"R" sn_"L"
+        \break
+
+        \flam sn16_"R"^> sn_"R" \flam sn_"L" sn_"L" \flam sn8_"R"^> \flam sn16_"L" sn_"L"
+        \flam sn8_"R"^> \flam sn16_"L" sn_"L" \flam sn16_"R" sn_"R" \flam sn8_"L"^>
+        \flam sn8_"R"^> \flam sn8_"L" \flam sn8_"R" \flam sn8_"L"^>
+        \break
+
+        \flam sn16_"R"^> sn_"L" sn8_"R" \flam sn16_"L"^> sn_"R" sn8_"L"
+        \flam sn8_"R"^> \drag sn16_"R" sn_"L" \flam sn8_"R"^> \repeat tremolo 4 sn32_"R"^"5 str."
+        sn8_"R"^> \flam sn_"L"^> sn16_"R"^> sn_"L" sn_"R" sn_"L"
+        \flam sn8_"R"^> \flam sn_"L"^> sn16_"R"^> sn_"L" sn_"R" sn_"L"
+        \break
+
+        \flam sn16_"R"^> sn_"L" sn_"R" sn_"R" \flam sn_"L"^> sn_"R" sn_"L" sn_"L"
+        \flam sn16_"R"^> sn_"L"^> sn_"R" sn_"L" sn_"R"^> sn_"L"^> sn_"R" sn_"L"
+        \flam sn8_"R"^> \drag sn_"R" \drag sn16_"R" sn_"L" sn_"R" sn_"R"
+        \break
+
+        sn8_"L"^> \drag sn_"L"  \drag sn16_"L" sn_"R" sn_"L" sn_"L"
+        \flam sn8_"R"^> \flam sn16_"L" sn_"L" \flam sn_"R" sn_"R" \flam sn8_"L"^>
+
+      }
+
+      \alternative {
+        { \repeat tremolo 8 sn32_"R"^"9 str." ~ sn8_"R"^> \drag sn16_"R" sn_"L" }
+        { \repeat tremolo 8 sn32_"R"^"9 str." ~ sn8_"R"^> r8 }
+      }
+    }
+  >>
+}
 
 song =
 \drums
@@ -112,58 +180,65 @@ song =
 % Layout
 \book {
 
-\score
-{
-  \header
-{
-  piece="SOLO No.1"
-}
-
-  \soloI
-
-  \layout
+  \score
   {
-    %    \set countPercentRepeats = ##t
-    %    \set repeatCountVisibility = #(every-nth-repeat-count-visible 1)
+    \header
+    {
+      piece="SOLO No.1"
+    }
+
+    \soloI
+
+    \layout
+    {
+      %    \set countPercentRepeats = ##t
+      %    \set repeatCountVisibility = #(every-nth-repeat-count-visible 1)
+    }
   }
-}
 
-\score
-{
-  \header
-{
-  piece="SOLO No.2"
-}
-
-  \song
-
-  \layout
+  \score
   {
-    %    \set countPercentRepeats = ##t
-    %    \set repeatCountVisibility = #(every-nth-repeat-count-visible 1)
+    \header
+    {
+      piece="SOLO No.2"
+    }
+
+    \soloII
+
+    \layout
+    {
+      %    \set countPercentRepeats = ##t
+      %    \set repeatCountVisibility = #(every-nth-repeat-count-visible 1)
+    }
   }
-}
 }
 
 % MIDI
 % Unfolded repeats are required for MIDI when using multiple voices
-\score
-{
-  \unfoldRepeats
-  {
-    \ticktock
-  }
 
-  \midi { }
+\book {
+  \bookOutputSuffix "1"
+  \score
+  {
+    \unfoldRepeats
+    {
+      \ticktock
+      \soloI
+    }
+
+    \midi { }
+  }
 }
 
-\score
-{
-  \unfoldRepeats
+\book {
+  \bookOutputSuffix "2"
+  \score
   {
-    \ticktock
-    \song
+    \unfoldRepeats
+    {
+      \ticktock
+      \soloII
+    }
+    \midi { }
   }
-
-  \midi { }
 }
