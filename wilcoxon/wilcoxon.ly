@@ -1,6 +1,5 @@
 \version "2.19.56"
 
-
 \paper {
   %page-count = #2
 }
@@ -51,8 +50,6 @@ soloI = \drummode
     \new DrumVoice {
       \voiceTwo
 
-      \partial 8 \repeat tremolo 4 sn32_"L"^"7 str."
-      % sn4:32
       \stemUp
       \repeat volta 2 {
         \acciaccatura sn16( \stemUp sn8_"R")^> sn_"R"
@@ -107,6 +104,7 @@ soloI = \drummode
         sn_"R"^> sn_"L" sn_"R"^> sn_"L"
         sn_"R" sn_"L"^> sn_"R" sn_"L"
 
+
         \acciaccatura sn16( \stemUp sn8_"R")^> \acciaccatura sn16( \stemUp sn8_"L"^>)
         \acciaccatura sn16( \stemUp sn4_"R")^>
       }
@@ -124,10 +122,8 @@ soloII = \drums {
 
       \voiceOne
       \slurDown
-      %  \stemDown
 
       \partial 8 sn16_"R" sn16_"L"
-
 
 
       \repeat volta 2 {
@@ -143,8 +139,8 @@ soloII = \drums {
         \break
 
         \flam sn16_"R"^> sn_"L" sn8_"R" \flam sn16_"L"^> sn_"R" sn8_"L"
-        \flam sn8_"R"^> \drag sn16_"R" sn_"L" \flam sn8_"R"^> \repeat tremolo 4 sn32_"R"^"5 str."
-        sn8_"R"^> \flam sn_"L"^> sn16_"R"^> sn_"L" sn_"R" sn_"L"
+        \flam sn8_"R"^> \drag sn16_"R" sn_"L" \flam sn8_"R"^> \repeat tremolo 4 sn32_"R"^"5 str." 
+        (sn8_"R"^>) \flam sn_"L"^> sn16_"R"^> sn_"L" sn_"R" sn_"L"
         \flam sn8_"R"^> \flam sn_"L"^> sn16_"R"^> sn_"L" sn_"R" sn_"L"
         \break
 
@@ -159,8 +155,8 @@ soloII = \drums {
       }
 
       \alternative {
-        { \repeat tremolo 8 sn32_"R"^"9 str." ~ sn8_"R"^> \drag sn16_"R" sn_"L" }
-        { \repeat tremolo 8 sn32_"R"^"9 str." ~ sn8_"R"^> r8 }
+        { \repeat tremolo 8 sn32_"R"^"9 str." (sn8_"R"^>) \drag sn16_"R" sn_"L" }
+        { \repeat tremolo 8 sn32_"R"^"9 str." (sn8_"R"^>) r8 }
       }
     }
   >>
@@ -234,9 +230,8 @@ song =
   \bookOutputSuffix "2"
   \score
   {
-    \unfoldRepeats
-    {
-      \ticktock
+    \unfoldRepeats  {
+      \ticktockIII
       \soloII
     }
     \midi { }
