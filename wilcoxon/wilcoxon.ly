@@ -139,7 +139,7 @@ soloII = \drums {
         \break
 
         \flam sn16_"R"^> sn_"L" sn8_"R" \flam sn16_"L"^> sn_"R" sn8_"L"
-        \flam sn8_"R"^> \drag sn16_"R" sn_"L" \flam sn8_"R"^> \repeat tremolo 4 sn32_"R"^"5 str." 
+        \flam sn8_"R"^> \drag sn16_"R" sn_"L" \flam sn8_"R"^> \repeat tremolo 4 sn32_"R"^"5 str."
         (sn8_"R"^>) \flam sn_"L"^> sn16_"R"^> sn_"L" sn_"R" sn_"L"
         \flam sn8_"R"^> \flam sn_"L"^> sn16_"R"^> sn_"L" sn_"R" sn_"L"
         \break
