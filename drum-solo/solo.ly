@@ -7,6 +7,13 @@
 
 
 \paper {
+
+  #(define fonts
+     (set-global-fonts
+      #:music "lilyjazz"
+      #:brace "lilyjazz"
+      #:factor (/ staff-height pt 20)
+      ))
   system-system-spacing.basic-distance = #20
   annotate-spacing = ##f
   ragged-last-bottom = ##t
@@ -106,9 +113,9 @@ soloI = \drums
     \new DrumVoice {
       \voiceOne
       \slurDown
-      \override StemTremolo #'slope = #0.5
-      \override StemTremolo #'beam-thickness = #0.3
-      \override StemTremolo #'beam-width = #2
+      %      \override StemTremolo #'slope = #0.5
+      %\override StemTremolo #'beam-thickness = #0.3
+      %\override StemTremolo #'beam-width = #2
       \override StemTremolo #'Y-offset = #3
       %  \override Beam #'positions = #'(4 . 4)
 
@@ -160,7 +167,7 @@ soloI = \drums
 
 
       \break
-      <sn cymc>1
+      <sn cymc>4 s2.
       s1
       \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { toml4 toml4 toml4 }
       \tuplet 3/2 { toml4 toml4 toml4 } \tuplet 3/2 { toml4 toml4 toml4 }
@@ -186,7 +193,7 @@ soloI = \drums
       \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 }
 
       \break
-      <sn cymc>1
+      <sn cymc>4 s2.
       \tuplet 3/2 { tomh8 tomh8 tomh8 } \tuplet 3/2 { tomh8^> r8 toml8 } \tuplet 3/2 { toml8 toml8 toml8 } \tuplet 3/2 { toml8^> r8 sn8^> }
 
       \tuplet 3/2 { cymc8 r8 cymr8 } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8 r8 cymr8 }
