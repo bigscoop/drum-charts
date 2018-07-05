@@ -10,10 +10,10 @@
   system-system-spacing.basic-distance = #20
   annotate-spacing = ##f
   ragged-last-bottom = ##t
-%  system-system-spacing.padding = #28   
-%  system-system-spacing.stretchability = #20
-%  page-count = #2
-%  system-count = #5
+  %  system-system-spacing.padding = #28
+  %  system-system-spacing.stretchability = #20
+  %  page-count = #2
+  %  system-count = #5
 }
 
 
@@ -106,54 +106,54 @@ soloI = \drums
     \new DrumVoice {
       \voiceOne
       \slurDown
-\override StemTremolo #'slope = #0.5
-  \override StemTremolo #'beam-thickness = #0.3
- \override StemTremolo #'beam-width = #2
-  \override StemTremolo #'Y-offset = #3
-%  \override Beam #'positions = #'(4 . 4)
+      \override StemTremolo #'slope = #0.5
+      \override StemTremolo #'beam-thickness = #0.3
+      \override StemTremolo #'beam-width = #2
+      \override StemTremolo #'Y-offset = #3
+      %  \override Beam #'positions = #'(4 . 4)
 
       \phraseA
       sn16 sn16 sn16 sn16 sn8 sn16 sn16^> r16 sn16 sn8^> sn4^>
       \phraseA
       sn16 sn16 sn16 sn16 sn16^> sn8^> sn16^> r16 sn16 sn8^> sn16^> sn8.^>
       \break
-      
+
       \phraseA
       \tuplet 3/2 { \flam sn8 tomh8 toml8} \tuplet 3/2 { \flam sn8 tomh8 toml8} \flam sn8 sn8:32^"5str"~sn4^>
       \flam sn8 tomh16 tomh16 r16 toml16 toml8 r16 \flam sn8. tomh16 tomh16 toml16 toml16
       \flam sn8 sn8:32^"5str"~sn16^> sn8^> tomh16 tomh8 sn8:32^"5str"~sn16^> sn8.^>
       \break
-      
+
       \phraseB
       sn8 sn16 sn16^> r16 sn16 sn8^> sn16 sn8^> sn16 sn4^>
       \phraseB
-      \tuplet 3/2 { sn8 sn8 sn8 } \tuplet 3/2 { sn8 sn8 sn8 } \tuplet 6/4 { sn16\< sn16 sn16 sn16 sn16 sn16 } \tuplet 6/4 { sn16 sn16 sn16 sn16 sn16 sn16\! } 
+      \tuplet 3/2 { sn8 sn8 sn8 } \tuplet 3/2 { sn8 sn8 sn8 } \tuplet 6/4 { sn16\< sn16 sn16 sn16 sn16 sn16 } \tuplet 6/4 { sn16 sn16 sn16 sn16 sn16 sn16\! }
       \break
-      
+
       \tempo 4=140
       \tuplet 3/2 { cymc8 r8 cymr8 } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { r8 cymr8 r8 } \tuplet 3/2 { cymr8 r8 cymr8 }
       \afroClave
       \afroClave
       \afroClave
-      
+
       \afroClaveWithSnare
       \afroClaveWithSnare
       \afroClaveWithSnare
       \tuplet 3/2 { tomh8 tomh8 tomh8 } \tuplet 3/2 { tomh8^> r8 toml8 } \tuplet 3/2 { toml8 toml8 toml8 } \tuplet 3/2 { toml8^> r8 sn8^> }
-      
+
       \break
       \tuplet 3/2 { cymc8 r8 cymr8 } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8 r8 cymr8 }
       \afroClaveWithSnare
       \afroClaveWithSnare
-      \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 sn8^> } 
-      
+      \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 sn8^> }
+
       \break
       \tuplet 3/2 { cymc8 r8 cymr8 } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8 r8 cymr8 }
       \afroClaveWithSnare
       \afroClaveWithSnare
-      \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 toml16 tomh16 } 
-      
-      \tuplet 3/2 { sn8 r8 sn8 } \tuplet 3/2 { r8 r8 toml16 tomh16 } \tuplet 3/2 { sn8 r8 sn8 } \tuplet 3/2 { r8 r8 toml16 tomh16 } 
+      \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 toml16 tomh16 }
+
+      \tuplet 3/2 { sn8 r8 sn8 } \tuplet 3/2 { r8 r8 toml16 tomh16 } \tuplet 3/2 { sn8 r8 sn8 } \tuplet 3/2 { r8 r8 toml16 tomh16 }
       \tuplet 3/2 { sn8 tomh8 toml8 } \tuplet 3/2 { toml8 tomh8 toml8 } \tuplet 3/2 { sn8 tomh8 toml8 } \tuplet 3/2 { toml8 tomh8 toml8 }
       \tuplet 3/2 { \flam sn4 bd4 \flam sn4 } \tuplet 3/2 { \flam sn4 bd4 <tomh toml>4 }
       \tuplet 3/2 { \flam sn4 bd4 \flam sn4 } \tuplet 3/2 { \flam sn4 bd4 <tomh toml>4 }
@@ -165,42 +165,42 @@ soloI = \drums
       \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { toml4 toml4 toml4 }
       \tuplet 3/2 { toml4 toml4 toml4 } \tuplet 3/2 { toml4 toml4 toml4 }
 
-      \tuplet 3/2 { <sn toml>4 toml4 <sn toml>4 } \tuplet 3/2 { <sn toml>4 toml4 toml4 } 
-      \tuplet 3/2 { <sn toml>4 toml4 <sn toml>4 } \tuplet 3/2 { <sn toml>4 toml4 toml4 } 
-      \tuplet 3/2 { <sn cymc>4 toml4 <sn cymc>4 } \tuplet 3/2 { <sn cymc>4 toml4 toml4 } 
-      \tuplet 3/2 { <sn cymc>4 toml4 <sn cymc>4 } \tuplet 3/2 { <sn cymc>4 toml4 toml4 } 
+      \tuplet 3/2 { <sn toml>4 toml4 <sn toml>4 } \tuplet 3/2 { <sn toml>4 toml4 toml4 }
+      \tuplet 3/2 { <sn toml>4 toml4 <sn toml>4 } \tuplet 3/2 { <sn toml>4 toml4 toml4 }
+      \tuplet 3/2 { <sn cymc>4 toml4 <sn cymc>4 } \tuplet 3/2 { <sn cymc>4 toml4 toml4 }
+      \tuplet 3/2 { <sn cymc>4 toml4 <sn cymc>4 } \tuplet 3/2 { <sn cymc>4 toml4 toml4 }
 
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn toml>8 sn8 toml4 toml4 } 
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn toml>8 sn8 toml4 toml4 } 
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 sn8 toml4 toml4 } 
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 sn8 toml4 toml4 } 
+      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn toml>8 sn8 toml4 toml4 }
+      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn toml>8 sn8 toml4 toml4 }
+      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 sn8 toml4 toml4 }
+      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 sn8 toml4 toml4 }
 
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 } 
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 } 
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 } 
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 } 
+      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 }
+      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 }
+      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 }
+      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 }
 
-      \tuplet 3/2 { <sn cymc>4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 } 
-      \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 } 
-      \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 } 
-      \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 } 
-      
+      \tuplet 3/2 { <sn cymc>4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 }
+      \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 }
+      \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 }
+      \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 }
+
       \break
       <sn cymc>1
       \tuplet 3/2 { tomh8 tomh8 tomh8 } \tuplet 3/2 { tomh8^> r8 toml8 } \tuplet 3/2 { toml8 toml8 toml8 } \tuplet 3/2 { toml8^> r8 sn8^> }
-      
+
       \tuplet 3/2 { cymc8 r8 cymr8 } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8 r8 cymr8 }
       \afroClaveWithSnare
       \afroClaveWithSnare
       \afroClaveWithSnare
-      
+
 
     }
     \new DrumVoice {
       \voiceTwo
 
       \repeat unfold 48 { hhp4 }
-      
+
       bd4 r2.
       s1
       s1
@@ -214,18 +214,18 @@ soloI = \drums
       \afroClaveBd
       \afroClaveBd
       \afroClaveBd
-      \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 r8 } 
-      
+      \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 r8 }
+
       \afroClaveBd
       \afroClaveBd
       \afroClaveBd
-      \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 r8 } 
-      
+      \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 r8 }
+
       r1
       r1
       r1
       r1
-      
+
       \tuplet 3/2 { hhp4 hhp4 hhp4 } \tuplet 3/2 { hhp4 hhp4 hhp4 }
       \tuplet 3/2 { hhp4 hhp4 hhp4 } \tuplet 3/2 { hhp4 hhp4 hhp4 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
@@ -235,32 +235,32 @@ soloI = \drums
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      
+
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      
+
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      
+
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      
+
       s1
       s1
-      
+
       \afroClaveBd
       \afroClaveBd
       \afroClaveBd
       \afroClaveBd
 
-      
-      
+
+
     }
   >>
 
@@ -290,7 +290,7 @@ song =
     {
       \override NonMusicalPaperColumn.line-break-permission = ##f
       % **EDIT** also here, specify ragged-right property
-%      ragged-right = ##f
+      %      ragged-right = ##f
       %    \set countPercentRepeats = ##t
       %    \set repeatCountVisibility = #(every-nth-repeat-count-visible 1)
     }
