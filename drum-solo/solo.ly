@@ -93,15 +93,15 @@ phraseB = \drummode {
 }
 
 afroClave = \drummode {
-  \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { r8 cymr8 r8 } \tuplet 3/2 { cymr8 r8 cymr8 }
+  \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { r8 cymr8 r8 } \tuplet 3/2 { cymr8[ r8 cymr8] }
 }
 
 afroClaveBd = \drummode {
-  \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { r8 bd8 bd8 } \tuplet 3/2 { r8 bd8 r8 } \tuplet 3/2 { bd8 r8 bd8 }
+  \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { r8 bd8 bd8 } \tuplet 3/2 { r8 bd8 r8 } \tuplet 3/2 { bd8[ r8 bd8] }
 }
 
 afroClaveWithSnare = \drummode {
-  \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8 r8 cymr8 }
+  \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8[ r8 cymr8] }
 }
 
 soloI = \drums
@@ -119,6 +119,7 @@ soloI = \drums
       \override StemTremolo #'Y-offset = #3
       %  \override Beam #'positions = #'(4 . 4)
 
+      \tempo 4=70
       \phraseA
       sn16 sn16 sn16 sn16 sn8 sn16 sn16^> r16 sn16 sn8^> sn4^>
       \phraseA
@@ -138,7 +139,7 @@ soloI = \drums
       \break
 
       \tempo 4=140
-      \tuplet 3/2 { cymc8 r8 cymr8 } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { r8 cymr8 r8 } \tuplet 3/2 { cymr8 r8 cymr8 }
+      \tuplet 3/2 { cymc8[ r8 cymr8] } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { r8 cymr8 r8 } \tuplet 3/2 { cymr8[ r8 cymr8] }
       \afroClave
       \afroClave
       \afroClave
@@ -149,26 +150,26 @@ soloI = \drums
       \tuplet 3/2 { tomh8 tomh8 tomh8 } \tuplet 3/2 { tomh8^> r8 toml8 } \tuplet 3/2 { toml8 toml8 toml8 } \tuplet 3/2 { toml8^> r8 sn8^> }
 
       \break
-      \tuplet 3/2 { cymc8 r8 cymr8 } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8 r8 cymr8 }
+      \tuplet 3/2 { cymc8[ r8 cymr8] } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8[ r8 cymr8] }
       \afroClaveWithSnare
       \afroClaveWithSnare
-      \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 sn8^> }
+      \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 sn8^>] }
 
       \break
-      \tuplet 3/2 { cymc8 r8 cymr8 } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8 r8 cymr8 }
+      \tuplet 3/2 { cymc8[ r8 cymr8] } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8[ r8 cymr8] }
       \afroClaveWithSnare
       \afroClaveWithSnare
-      \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 cymr8 } \tuplet 3/2 { cymr8 r8 toml16 tomh16 }
+      \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 toml16 tomh16] }
 
-      \tuplet 3/2 { sn8 r8 sn8 } \tuplet 3/2 { r8 r8 toml16 tomh16 } \tuplet 3/2 { sn8 r8 sn8 } \tuplet 3/2 { r8 r8 toml16 tomh16 }
+      \tuplet 3/2 { sn8[ r8 sn8] } \tuplet 3/2 { r8 r8 toml16 tomh16 } \tuplet 3/2 { sn8[ r8 sn8] } \tuplet 3/2 { r8 r8 toml16 tomh16 }
       \tuplet 3/2 { sn8 tomh8 toml8 } \tuplet 3/2 { toml8 tomh8 toml8 } \tuplet 3/2 { sn8 tomh8 toml8 } \tuplet 3/2 { toml8 tomh8 toml8 }
       \tuplet 3/2 { \flam sn4 bd4 \flam sn4 } \tuplet 3/2 { \flam sn4 bd4 <tomh toml>4 }
       \tuplet 3/2 { \flam sn4 bd4 \flam sn4 } \tuplet 3/2 { \flam sn4 bd4 <tomh toml>4 }
 
 
       \break
-      <sn cymc>4 s2.
-      s1
+      <sn cymc>4 r2.
+      r1
       \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { toml4 toml4 toml4 }
       \tuplet 3/2 { toml4 toml4 toml4 } \tuplet 3/2 { toml4 toml4 toml4 }
 
@@ -193,7 +194,7 @@ soloI = \drums
       \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 }
 
       \break
-      <sn cymc>4 s2.
+      <sn cymc>4 r2.
       \tuplet 3/2 { tomh8 tomh8 tomh8 } \tuplet 3/2 { tomh8^> r8 toml8 } \tuplet 3/2 { toml8 toml8 toml8 } \tuplet 3/2 { toml8^> r8 sn8^> }
 
       \tuplet 3/2 { cymc8 r8 cymr8 } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8 r8 cymr8 }
@@ -209,24 +210,24 @@ soloI = \drums
       \repeat unfold 48 { hhp4 }
 
       bd4 r2.
-      s1
-      s1
+      r1
+      r1
       r2. \tuplet 3/2 { r8 r8 bd8 }
 
       bd4 r2 \tuplet 3/2 { r8 r8 bd8 }
       bd4 r2 \tuplet 3/2 { r8 r8 bd8 }
       bd4 r2 \tuplet 3/2 { r8 r8 bd8 }
-      s1
+      r1
 
       \afroClaveBd
       \afroClaveBd
       \afroClaveBd
-      \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 r8 }
+      \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8 r8 r8 }
 
       \afroClaveBd
       \afroClaveBd
       \afroClaveBd
-      \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 bd8 } \tuplet 3/2 { bd8 r8 r8 }
+      \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8 r8 r8 }
 
       r1
       r1
@@ -258,8 +259,8 @@ soloI = \drums
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
 
-      s1
-      s1
+      r1
+      r1
 
       \afroClaveBd
       \afroClaveBd
