@@ -163,8 +163,8 @@ soloI = \drums
 
       \tuplet 3/2 { sn8[ r8 sn8] } \tuplet 3/2 { r8 r8 toml16 tomh16 } \tuplet 3/2 { sn8[ r8 sn8] } \tuplet 3/2 { r8 r8 toml16 tomh16 }
       \tuplet 3/2 { sn8 tomh8 toml8 } \tuplet 3/2 { toml8 tomh8 toml8 } \tuplet 3/2 { sn8 tomh8 toml8 } \tuplet 3/2 { toml8 tomh8 toml8 }
-      \tuplet 3/2 { \flam sn4 bd4 \flam sn4 } \tuplet 3/2 { \flam sn4 bd4 <tomh toml>4 }
-      \tuplet 3/2 { \flam sn4 bd4 \flam sn4 } \tuplet 3/2 { \flam sn4 bd4 <tomh toml>4 }
+      \tuplet 3/2 { \flam sn4 r4 \flam sn4 } \tuplet 3/2 { \flam sn4 r4 <tomh toml>4 }
+      \tuplet 3/2 { \flam sn4 r4 \flam sn4 } \tuplet 3/2 { \flam sn4 r4 <tomh toml>4 }
 
 
       \break
@@ -231,8 +231,8 @@ soloI = \drums
 
       r1
       r1
-      r1
-      r1
+      \tuplet 3/2 { r4 bd4 r4 } \tuplet 3/2 { r4 bd4 r4 }
+      \tuplet 3/2 { r4 bd4 r4 } \tuplet 3/2 { r4 bd4 r4 }
 
       \tuplet 3/2 { hhp4 hhp4 hhp4 } \tuplet 3/2 { hhp4 hhp4 hhp4 }
       \tuplet 3/2 { hhp4 hhp4 hhp4 } \tuplet 3/2 { hhp4 hhp4 hhp4 }
