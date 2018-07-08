@@ -147,7 +147,7 @@ soloI = \drums
       \afroClaveWithSnare
       \afroClaveWithSnare
       \afroClaveWithSnare
-      \tuplet 3/2 { tomh8 tomh8 tomh8 } \tuplet 3/2 { tomh8^> r8 toml8 } \tuplet 3/2 { toml8 toml8 toml8 } \tuplet 3/2 { toml8^> r8 sn8^> }
+      \tuplet 3/2 { tomh8 tomh8 tomh8 } \tuplet 3/2 { tomh8^>[ r8 toml8] } \tuplet 3/2 { toml8 toml8 toml8 } \tuplet 3/2 { toml8^>[ r8 sn8^>] }
 
       \break
       \tuplet 3/2 { cymc8[ r8 cymr8] } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8[ r8 cymr8] }
