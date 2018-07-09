@@ -156,7 +156,7 @@ soloI = \drums
       \repeat percent 2 { \afroClaveWithSnare }
       \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 toml16 tomh16] }
 
-      \tuplet 3/2 { sn8[ r8 sn8] } \tuplet 3/2 { r8 r8 toml16 tomh16 } \tuplet 3/2 { sn8[ r8 sn8] } \tuplet 3/2 { r8 r8 toml16 tomh16 }
+      \tuplet 3/2 { sn8[ r8 sn8] } \tuplet 3/2 { r4 toml16 tomh16 } \tuplet 3/2 { sn8[ r8 sn8] } \tuplet 3/2 { r4 toml16 tomh16 }
       \tuplet 3/2 { sn8 tomh8 toml8 } \tuplet 3/2 { toml8 tomh8 toml8 } \tuplet 3/2 { sn8 tomh8 toml8 } \tuplet 3/2 { toml8 tomh8 toml8 }
       \repeat percent 2 { \tuplet 3/2 { \flam sn4 r4 \flam sn4 } \tuplet 3/2 { \flam sn4 r4 <tomh toml>4 } }
 
@@ -200,18 +200,18 @@ soloI = \drums
 
       bd4 r2.
       \repeat percent 2 { r1 }
-      r2. \tuplet 3/2 { r8 r8 bd8 }
+      r2. \tuplet 3/2 { r4 bd8 }
 
-      \repeat percent 3 { bd4 r2 \tuplet 3/2 { r8 r8 bd8 } }
+      \repeat percent 3 { bd4 r2 \tuplet 3/2 { r4 bd8 } }
       r1
 
       \afroClaveBd
       \repeat percent 2 { \afroClaveBd }
-      \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8 r8 r8 }
+      \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8 r4 }
 
       \afroClaveBd
       \repeat percent 2 { \afroClaveBd }
-      \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8 r8 r8 }
+      \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8 r4 }
 
       r1
       r1
