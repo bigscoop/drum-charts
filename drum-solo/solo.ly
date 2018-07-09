@@ -245,54 +245,14 @@ soloI = \drums
 
     }
   >>
-
+\bar "|."
 }
 
-
-song =
-\drums
-{
-
-
+\score {
   \soloI
-  \break
-
-  \bar "|."
+  \layout { }
 }
-
-% Layout
-\book {
-
-  \score
-  {
-
-    \soloI
-
-    \layout
-    {
-      \override NonMusicalPaperColumn.line-break-permission = ##f
-      % **EDIT** also here, specify ragged-right property
-      %      ragged-right = ##f
-      %    \set countPercentRepeats = ##t
-      %    \set repeatCountVisibility = #(every-nth-repeat-count-visible 1)
-    }
-  }
-
-}
-
-% MIDI
-% Unfolded repeats are required for MIDI when using multiple voices
-
-\book {
-  \bookOutputSuffix "1"
-  \score
-  {
-    \unfoldRepeats
-    {
-      %      \ticktock
-      \soloI
-    }
-
-    \midi { }
-  }
+\score {
+  \unfoldRepeats { \soloI }
+  \midi { }
 }
