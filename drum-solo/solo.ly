@@ -140,31 +140,25 @@ soloI = \drums
 
       \tempo 4=140
       \tuplet 3/2 { cymc8[ r8 cymr8] } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { r8 cymr8 r8 } \tuplet 3/2 { cymr8[ r8 cymr8] }
-      \afroClave
-      \afroClave
+      \repeat percent 2 { \afroClave }
       \afroClave
 
-      \afroClaveWithSnare
-      \afroClaveWithSnare
-      \afroClaveWithSnare
+      \repeat percent 3 { \afroClaveWithSnare }
       \tuplet 3/2 { tomh8 tomh8 tomh8 } \tuplet 3/2 { tomh8^>[ r8 toml8] } \tuplet 3/2 { toml8 toml8 toml8 } \tuplet 3/2 { toml8^>[ r8 sn8^>] }
 
       \break
       \tuplet 3/2 { cymc8[ r8 cymr8] } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8[ r8 cymr8] }
-      \afroClaveWithSnare
-      \afroClaveWithSnare
+      \repeat percent 2 { \afroClaveWithSnare }
       \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 sn8^>] }
 
       \break
       \tuplet 3/2 { cymc8[ r8 cymr8] } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8[ r8 cymr8] }
-      \afroClaveWithSnare
-      \afroClaveWithSnare
+      \repeat percent 2 { \afroClaveWithSnare }
       \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 cymr8] } \tuplet 3/2 { cymr8[ r8 toml16 tomh16] }
 
       \tuplet 3/2 { sn8[ r8 sn8] } \tuplet 3/2 { r8 r8 toml16 tomh16 } \tuplet 3/2 { sn8[ r8 sn8] } \tuplet 3/2 { r8 r8 toml16 tomh16 }
       \tuplet 3/2 { sn8 tomh8 toml8 } \tuplet 3/2 { toml8 tomh8 toml8 } \tuplet 3/2 { sn8 tomh8 toml8 } \tuplet 3/2 { toml8 tomh8 toml8 }
-      \tuplet 3/2 { \flam sn4 r4 \flam sn4 } \tuplet 3/2 { \flam sn4 r4 <tomh toml>4 }
-      \tuplet 3/2 { \flam sn4 r4 \flam sn4 } \tuplet 3/2 { \flam sn4 r4 <tomh toml>4 }
+      \repeat percent 2 { \tuplet 3/2 { \flam sn4 r4 \flam sn4 } \tuplet 3/2 { \flam sn4 r4 <tomh toml>4 } }
 
 
       \break
@@ -173,27 +167,22 @@ soloI = \drums
       \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { toml4 toml4 toml4 }
       \tuplet 3/2 { toml4 toml4 toml4 } \tuplet 3/2 { toml4 toml4 toml4 }
 
-      \tuplet 3/2 { <sn toml>4 toml4 <sn toml>4 } \tuplet 3/2 { <sn toml>4 toml4 toml4 }
-      \tuplet 3/2 { <sn toml>4 toml4 <sn toml>4 } \tuplet 3/2 { <sn toml>4 toml4 toml4 }
-      \tuplet 3/2 { <sn cymc>4 toml4 <sn cymc>4 } \tuplet 3/2 { <sn cymc>4 toml4 toml4 }
-      \tuplet 3/2 { <sn cymc>4 toml4 <sn cymc>4 } \tuplet 3/2 { <sn cymc>4 toml4 toml4 }
-
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn toml>8 sn8 toml4 toml4 }
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn toml>8 sn8 toml4 toml4 }
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 sn8 toml4 toml4 }
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 sn8 toml4 toml4 }
-
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 }
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 }
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 }
-      \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 }
-
-      \tuplet 3/2 { <sn cymc>4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 }
-      \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 }
-      \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 }
-      \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 }
+      \repeat percent 2 { \tuplet 3/2 { <sn toml>4 toml4 <sn toml>4 } \tuplet 3/2 { <sn toml>4 toml4 toml4 } }
+      \repeat percent 2 { \tuplet 3/2 { <sn cymc>4 toml4 <sn cymc>4 } \tuplet 3/2 { <sn cymc>4 toml4 toml4 } }
 
       \break
+      \repeat percent 2 { \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn toml>8 sn8 toml4 toml4 } }
+      \repeat percent 2 { \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 sn8 toml4 toml4 } }
+
+      \break
+      \repeat percent 4 { \tuplet 3/2 { <sn cymc>4 toml4 toml4 } \tuplet 3/2 { <sn cymc>8 tomh8 toml4 toml4 } }
+
+      \break
+      \tuplet 3/2 { <sn cymc>4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 }
+      \repeat percent 3 { \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 } }
+
+      \break
+      \mark "TBD noch"
       <sn cymc>4 r2.
       \tuplet 3/2 { tomh8 tomh8 tomh8 } \tuplet 3/2 { tomh8^> r8 toml8 } \tuplet 3/2 { toml8 toml8 toml8 } \tuplet 3/2 { toml8^> r8 sn8^> }
 
@@ -210,54 +199,39 @@ soloI = \drums
       \repeat unfold 48 { hhp4 }
 
       bd4 r2.
-      r1
-      r1
+      \repeat percent 2 { r1 }
       r2. \tuplet 3/2 { r8 r8 bd8 }
 
-      bd4 r2 \tuplet 3/2 { r8 r8 bd8 }
-      bd4 r2 \tuplet 3/2 { r8 r8 bd8 }
-      bd4 r2 \tuplet 3/2 { r8 r8 bd8 }
+      \repeat percent 3 { bd4 r2 \tuplet 3/2 { r8 r8 bd8 } }
       r1
 
       \afroClaveBd
-      \afroClaveBd
-      \afroClaveBd
+      \repeat percent 2 { \afroClaveBd }
       \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8 r8 r8 }
 
       \afroClaveBd
-      \afroClaveBd
-      \afroClaveBd
+      \repeat percent 2 { \afroClaveBd }
       \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8[ r8 bd8] } \tuplet 3/2 { bd8 r8 r8 }
 
       r1
       r1
-      \tuplet 3/2 { r4 bd4 r4 } \tuplet 3/2 { r4 bd4 r4 }
-      \tuplet 3/2 { r4 bd4 r4 } \tuplet 3/2 { r4 bd4 r4 }
+      \repeat percent 2 { \tuplet 3/2 { r4 bd4 r4 } \tuplet 3/2 { r4 bd4 r4 } }
 
       \tuplet 3/2 { hhp4 hhp4 hhp4 } \tuplet 3/2 { hhp4 hhp4 hhp4 }
       \tuplet 3/2 { hhp4 hhp4 hhp4 } \tuplet 3/2 { hhp4 hhp4 hhp4 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
 
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
+      \repeat percent 2 { \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 } }
+      \repeat percent 2 { \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 } }
+
+      \repeat percent 2 { \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 } }
+      \repeat percent 2 { \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 } }
+
+      \repeat percent 4 { \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 } }
 
       \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
-      \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 }
+      \repeat percent 3 { \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8  } \tuplet 3/2 { hhp8 bd8 hhp8 bd8 hhp8 bd8 } }
 
       r1
       r1
