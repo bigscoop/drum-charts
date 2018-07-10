@@ -119,6 +119,7 @@ soloI = \drums
       \override StemTremolo #'Y-offset = #3
       %  \override Beam #'positions = #'(4 . 4)
 
+
       \tempo 4=70
       \phraseA
       sn16 sn16 sn16 sn16 sn8 sn16 sn16^> r16 sn16 sn8^> sn4^>
@@ -127,7 +128,7 @@ soloI = \drums
       \break
 
       \phraseA
-      \tuplet 3/2 { \flam sn8 tomh8 toml8} \tuplet 3/2 { \flam sn8 tomh8 toml8} \flam sn8 sn8:32^"5str"~sn4^>
+      \tuplet 3/2 { \flam sn8 tomh8 toml8 } \tuplet 3/2 { \flam sn8 tomh8 toml8 } \flam sn8 sn8:32^"5str"~sn4^>
       \flam sn8 tomh16 tomh16 r16 toml16 toml8 r16 \flam sn8. tomh16 tomh16 toml16 toml16
       \flam sn8 sn8:32^"5str"~sn16^> sn8^> tomh16 tomh8 sn8:32^"5str"~sn16^> sn8.^>
       \break
@@ -135,7 +136,7 @@ soloI = \drums
       \phraseB
       sn8 sn16 sn16^> r16 sn16 sn8^> sn16 sn8^> sn16 sn4^>
       \phraseB
-      \tuplet 3/2 { sn8 sn8 sn8 } \tuplet 3/2 { sn8 sn8 sn8 } \tuplet 6/4 { sn16\< sn16 sn16 sn16 sn16 sn16 } \tuplet 6/4 { sn16 sn16 sn16 sn16 sn16 sn16\! }
+      \tuplet 3/2 { sn8 sn8 sn8 } \tuplet 3/2 { sn8 sn8 sn8 } \tuplet 6/4 { sn16 sn16 sn16 sn16 sn16 sn16 } \tuplet 6/4 { sn16 sn16 sn16 sn16 sn16 sn16 }
       \break
 
       \tempo 4=140
@@ -182,19 +183,33 @@ soloI = \drums
       \repeat percent 3 { \tuplet 3/2 { sn4 toml8 sn8 toml4 } \tuplet 3/2 { <sn toml>4 toml8 sn8 toml4 } }
 
       \break
-      \mark "TBD noch"
       <sn cymc>4 r2.
-      \tuplet 3/2 { tomh8 tomh8 tomh8 } \tuplet 3/2 { tomh8^> r8 toml8 } \tuplet 3/2 { toml8 toml8 toml8 } \tuplet 3/2 { toml8^> r8 sn8^> }
+      \tuplet 3/2 { tomh8 tomh8 tomh8 } \tuplet 3/2 { tomh8^>[ r8 toml8] } \tuplet 3/2 { toml8 toml8 toml8 } \tuplet 3/2 { toml8^> r4 }
 
-      \tuplet 3/2 { cymc8 r8 cymr8 } \tuplet 3/2 { r8 cymr8 cymr8 } \tuplet 3/2 { sn8 cymr8 r8 } \tuplet 3/2 { cymr8 r8 cymr8 }
-      \afroClaveWithSnare
-      \afroClaveWithSnare
-      \afroClaveWithSnare
+
+      \break
+      \tempo 4=70
+      \flam sn16 hho8 \flam sn16 hho8 \flam sn16 hho16 r16 \flam sn16 hho8 \tuplet 3/2 { \flam sn8 tomh8 toml8 }
+      cymc8 sn8:32^"5str"~sn8.^> sn16 r16 sn16 sn8 sn4
+      hho16 sn8 hho16 sn8 hho16 sn16 r16 hho16 sn8 \tuplet 3/2 { \flam sn8 tomh8 toml8 }
+      cymc8 sn8:32^"5str"~sn8.^> sn16 r16 sn16 sn8 sn4
+
+
+
+      \phraseA
+      \tuplet 3/2 { \flam sn8 tomh8 toml8 } \tuplet 3/2 { \flam sn8 tomh8 toml8 } sn8 sn8:32^"5str"~sn4
+      \phraseA
+      \tuplet 3/2 { \flam sn8 tomh8 toml8 } \tuplet 3/2 { \flam sn8 tomh8 toml8 } \tuplet 3/2 { cymr8 cymr8 cymr8 } \tuplet 3/2 { cymr8 cymr8 cymr8 }
+      cymr4 r2.
+
+      \break
+
 
 
     }
     \new DrumVoice {
       \voiceTwo
+
 
       \repeat unfold 48 { hhp4 }
 
@@ -236,16 +251,27 @@ soloI = \drums
       r1
       r1
 
-      \afroClaveBd
-      \afroClaveBd
-      \afroClaveBd
-      \afroClaveBd
+      r16 bd8. bd8. bd16 r8 bd8 r4
+      bd1
+      bd16 hhp8 bd16 hhp8 bd16 hhp16 r16 bd16 hhp8 r4
+      bd1
 
+      \repeat unfold 14 { hhp4 }
+      r2
+      r1
 
 
     }
+    \new Dynamics {
+      \repeat unfold 11 { s1 }
+      s2 s2\< | s1\!
+      \repeat unfold 48 { s1 }
+      \override Hairpin.to-barline = ##f
+      s2 s2\>-"rit."
+      s1\!
+    }
   >>
-\bar "|."
+  \bar "|."
 }
 
 \score {
