@@ -75,7 +75,7 @@ main = \drums
       }
       \alternative {
         { hh8 hh8 hh8 hh8 hh8 hho8 \bar ":|]" }
-        {hh8 hh8 hh8 hh8 hh8 hh8 \bar ":|]" }
+        { hh8 hh8 hh8 hh8 hh8 hh8 }
       }
 
 
@@ -148,23 +148,20 @@ main = \drums
 
       \break
       \mark "End"
-      \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
-      hh8 hh8 hh8 hh8 hh8 hho8
+      \bar "[|:"
+      \repeat volta 2 {
+        \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
+        hh8 hh8 hh8 hh8 hh8 hho8
 
-      \break
-      \repeat unfold 12 { hh8 }
-      cymc8 hh8 hh8 hh8 hh8 hh8
-      hh8 hh8 hh8 hh8 hh8 hho8
+        \break
+        \repeat unfold 12 { hh8 }
+        cymc8 hh8 hh8 hh8 hh8 hh8
+      }
 
-      \break
-      \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
-      hh8 hh8 hh8 hh8 hh8 hho8
-
-      \break
-      \repeat unfold 12 { hh8 }
-      cymc8 hh8 hh8 hh8 hh8 hh8
-      hh8 hh8 hh8 hh8 hh8 hh8
-
+      \alternative {
+        { hh8 hh8 hh8 hh8 hh8 hho8 \bar ":|]" }
+        { hh8 hh8 hh8 hh8 hh8 hh8 }
+      }
 
 
     }
@@ -258,21 +255,19 @@ main = \drums
       r4. sn8[ r8 bd8]
       bd4. r4.
 
-      \repeat percent 3 { bd4. ss8[ r8 bd8] }
-      bd4. ss8 bd8 bd8
+      % end
+      \repeat volta 2 {
+        \repeat percent 3 { bd4. ss8[ r8 bd8] }
+        bd4. ss8 bd8 bd8
 
-      bd4. ss8[ r8 bd8]
-      bd4. ss8 bd8 bd8
-      bd4. ss8[ r8 bd8]
-      bd8[ r8 bd8] bd8[ r8 bd8]
-
-      \repeat percent 3 { bd4. ss8[ r8 bd8] }
-      bd4. ss8 bd8 bd8
-
-      bd4. ss8[ r8 bd8]
-      bd4. ss8 bd8 bd8
-      bd4. ss8[ r8 bd8]
-      bd8 bd8 bd8 bd8 bd8 bd8
+        bd4. ss8[ r8 bd8]
+        bd4. ss8 bd8 bd8
+        bd4. ss8[ r8 bd8]
+      }
+      \alternative {
+        { bd8[ r8 bd8] bd8[ r8 bd8] }
+        { bd8 bd8 bd8 bd8 bd8 bd8 }
+      }
 
 
 
