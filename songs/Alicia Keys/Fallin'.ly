@@ -65,20 +65,19 @@ main = \drums
 
       \break
       \mark "Verse 2"
-      \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
-      hh8 hh8 hh8 hh8 hh8 hho8
+      \bar "[|:"
+      \repeat volta 2 {
+        \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
+        hh8 hh8 hh8 hh8 hh8 hho8
 
-      \break
-      \repeat unfold 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
-      hh8 hh8 hh8 hh8 hh8 hho8
+        \break
+        \repeat unfold 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
+      }
+      \alternative {
+        { hh8 hh8 hh8 hh8 hh8 hho8 \bar ":|]" }
+        {hh8 hh8 hh8 hh8 hh8 hh8 \bar ":|]" }
+      }
 
-      \break
-      \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
-      hh8 hh8 hh8 hh8 hh8 hho8
-
-      \break
-      \repeat unfold 24 { hh8 }
-      \bar "||"
 
       \break
       \mark "Chorus 2"
@@ -197,22 +196,21 @@ main = \drums
       bd4. r4.
 
 
-      \repeat percent 3 { bd4. ss8[ r8 bd8] }
-      bd4. ss8 bd8 bd8
+      \repeat volta 2 {
+        \repeat percent 3 { bd4. ss8[ r8 bd8] }
+        bd4. ss8 bd8 bd8
 
-      bd4. ss8[ r8 bd8]
-      bd4. ss8 bd8 bd8
-      bd4. ss8[ r8 bd8]
-      bd8[ r8 bd8] bd8[ r8 bd8]
+        bd4. ss8[ r8 bd8]
+        bd4. ss8 bd8 bd8
+        bd4. ss8[ r8 bd8]
+      }
+      \alternative {
+        { bd8[ r8 bd8] bd8[ r8 bd8] }
+        { bd8 bd8 bd8 bd8 bd8 bd8 }
+      }
 
-      \repeat percent 3 { bd4. ss8[ r8 bd8] }
-      bd4. ss8 bd8 bd8
 
-      bd4. ss8[ r8 bd8]
-      bd4. ss8 bd8 bd8
-      bd4. ss8[ r8 bd8]
-      bd8 bd8 bd8 bd8 bd8 bd8
-
+      % chorus 2
       r4. sn8[ r8 bd8]
       bd8 bd8 bd8  sn8 bd8 bd8
       bd8[ r8 bd8] sn8[ r8 bd8]
