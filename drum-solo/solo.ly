@@ -2,7 +2,7 @@
 
 \include "articulate.ly"
 
-\include "common.ily"
+\include "../common/common.ily"
 
 
 
