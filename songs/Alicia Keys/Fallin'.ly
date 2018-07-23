@@ -4,25 +4,14 @@
 
 \include "../../common/common.ily"
 
-
+#(set-global-staff-size 19)
+\include "jazzchords.ily"
+\include "lilyjazz.ily"
+\include "jazzextras.ily"
 
 \paper {
-
-  #(define fonts
-     (set-global-fonts
-      #:music "lilyjazz"
-      #:brace "lilyjazz"
-      #:factor (/ staff-height pt 20)
-      ))
- % system-system-spacing.basic-distance = #20
-  %annotate-spacing = ##f
-  ragged-last-bottom = ##f
-  %  system-system-spacing.padding = #28
-    system-system-spacing.stretchability = #20
-    page-count = #2
-  %  system-count = #5
+   ragged-last-bottom = ##f
 }
-
 
 
 \layout {
@@ -40,21 +29,16 @@ main = \drums
 
   \set DrumStaff.drumStyleTable = #(alist->hash-table drumheads)
   \time 6/8
+      \tempo 4=64
   <<
     \new DrumVoice {
       \voiceOne
-      %      \override StemTremolo #'slope = #0.5
-      %\override StemTremolo #'beam-thickness = #0.3
-      %\override StemTremolo #'beam-width = #2
-      \override StemTremolo #'Y-offset = #3
-      %  \override Beam #'positions = #'(4 . 4)
 
-
-      \tempo 4=64
-      \override MultiMeasureRest.expand-limit = #3
      
+      \override MultiMeasureRest.expand-limit = #3
       \compressFullBarRests
-      R1 * 6/8 * 4 \bar "||"
+      \inlineMMR R1 * 6/8 * 4 
+      \bar "||"
       
       \mark "Verse 1"
       \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 } 
@@ -76,7 +60,8 @@ main = \drums
       \break
       \repeat unfold 2 { cymr8 cymr8 cymr8 cymr8 cymr8 cymr8 } 
       cymc8 cymr8 cymr8 cymr8 cymr8 cymr8
-      cymr4. r4. \bar "||"
+      cymr4. r4. 
+      \bar "||"
       
       \break
       \mark "Verse 2"
@@ -97,15 +82,15 @@ main = \drums
       
       \break
       \mark "Chorus 2"
-      r4. hh8 hh8 hh8
-      \repeat unfold 6 { hh8 }
-      cymc8 hh8 hh8 hh8 hh8 hh8
-      hh8 hh8 hh8 hh8 hh8 hho8
+      r4. cymr8 cymr8 cymr8
+      \repeat unfold 6 { cymr8 }
+      cymc8 cymr8 cymr8 cymr8 cymr8 cymr8 
+      cymr8 cymr8 cymr8 cymr8 cymr8  <cymr hho>8
       
       \break
-      \repeat unfold 12 { hh8 }
-      r4. hh8 hh8 hh8
-      hh4. hh8 hh8 hho8
+      \repeat unfold 12 { cymr8 }
+      r4. cymr8 cymr8 cymr8 
+      cymr4. hh8 hh8 hho8
       \bar "||"
       
       \break
@@ -133,12 +118,14 @@ main = \drums
       
   \override TupletBracket.shorten-pair = #'(-4.0 . -4.0)
   \override TupletNumber.text = \markup "play 3x"
+  \bar "[|:"
       \repeat volta 3 { \tuplet 4/4 { cymr8 cymr8 cymr8 cymc8 cymr8 cymr8 
                         cymr8 cymr8 cymr8 cymr8 cymr8 cymr8 
                         r4. cymc8 cymr8 cymr8 
                         cymr8 cymr8 cymr8 cymr8 cymr8 <hho cymr>8 
                         }
       }
+      \bar ":|]"
       
       \break
       cymr8 cymr8 cymr8 cymc8 cymr8 cymr8
@@ -185,8 +172,9 @@ main = \drums
 
       \override MultiMeasureRest.expand-limit = #3
       \compressFullBarRests
-      R1 * 6/8 * 4 \bar "||"
-      s1 s1 s1
+      \inlineMMR R1 * 6/8 * 4 \bar "||"
+      \repeat percent 3 { r1 * 6/8 }
+      r4. ss4.
       
       \repeat percent 3 { bd4. ss8[ r8 bd8] }
       bd4. ss8 bd8 bd8
