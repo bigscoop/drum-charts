@@ -51,38 +51,6 @@ ticktockIII = \drums {
   }
 }
 
-#(define sjsdrums '(
-                     (acousticbassdrum () #f -3)
-                     (bassdrum () #f -3)
-                     (sidestick cross #f 1)
-                     (acousticsnare () #f 1)
-                     (snare () #f 1)
-                     (handclap triangle #f 1)
-                     (electricsnare () #f 1)
-                     (lowfloortom () #f -4)
-                     (closedhihat cross "stopped" 5)
-                     (hihat cross #f 5)
-                     (highfloortom () #f -2)
-                     (pedalhihat cross #f -5)
-                     (lowtom () #f -1)
-                     (openhihat cross "open" 5)
-                     (halfopenhihat xcircle #f 3)
-                     (lowmidtom () #f 0)
-                     (himidtom () #f 2)
-                     (crashcymbala cross #f 6)
-                     (crashcymbal cross #f 6)
-                     (hightom () #f 3)
-                     (ridecymbala cross #f 4)
-                     (ridecymbal cross #f 4)
-                     (chinesecymbal xcircle #f 6)
-                     (ridebell () #f 4)
-                     (splashcymbal cross #f 7)
-                     (cowbell triangle #f 5)
-                     (crashcymbalb cross #f 5)
-                     (vibraslap diamond #f 4)
-                     (ridecymbalb cross #f 5)
-                     ))
-
 
 phraseA = \drummode {
   \flam sn8. tomh16 r8  toml8 r16 \flam sn8. tomh8 toml8
@@ -107,7 +75,7 @@ afroClaveWithSnare = \drummode {
 soloI = \drums
 {
 
-  \set DrumStaff.drumStyleTable = #(alist->hash-table sjsdrums)
+  \set DrumStaff.drumStyleTable = #(alist->hash-table drumheads)
   \time 4/4
   <<
     \new DrumVoice {
