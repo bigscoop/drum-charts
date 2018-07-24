@@ -65,10 +65,11 @@ main = \drums
       \bar "||"
 
       \break
-      \mark "Verse 2 (0:55)"
+      \mark \markup { \column { \line  { "Verse 2 (0:55)" }  { \line  { "Outro (2:55)" } } } }
+
       \bar "[|:"
       \repeat volta 2 {
-        \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
+        \repeat percent 3 { hh8 \segno hh8 hh8 hh8 hh8 hh8 }
         hh8 hh8 hh8 hh8 hh8 hho8
 
         \break
@@ -76,7 +77,7 @@ main = \drums
       }
       \alternative {
         { hh8 hh8 hh8 hh8 hh8 hho8 \bar ":|]" }
-        { hh8 hh8 hh8 hh8 hh8 hh8 }
+        { hh8 hh8 hh8 hh8 hh8 hh8-"Fine" }
       }
       \bar "||"
 
@@ -149,23 +150,7 @@ main = \drums
       r4. cymc8 cymr8 r8
       hho4. r4.
 
-      \break
-      \mark "Outro (2:55)"
-      \bar "[|:"
-      \repeat volta 2 {
-        \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
-        hh8 hh8 hh8 hh8 hh8 hho8
-
-        \break
-        \repeat unfold 12 { hh8 }
-        cymc8 hh8 hh8 hh8 hh8 hh8
-      }
-
-      \alternative {
-        { hh8 hh8 hh8 hh8 hh8 hho8 \bar ":|]" }
-        { hh8 hh8 hh8 hh8 hh8 hh8 }
-      }
-
+      \mark "D.S. al Fine"
 
     }
     \new DrumVoice {
@@ -257,22 +242,6 @@ main = \drums
       bd8 <bd sn>8 sn8 sn8[ r8 bd8]
       r4. sn8[ r8 bd8]
       bd4. r4.
-
-      % end
-      \repeat volta 2 {
-        \repeat percent 3 { bd4. ss8[ r8 bd8] }
-        bd4. ss8 bd8 bd8
-
-        bd4. ss8[ r8 bd8]
-        bd4. ss8 bd8 bd8
-        bd4. ss8[ r8 bd8]
-      }
-      \alternative {
-        { bd8[ r8 bd8] bd8[ r8 bd8] }
-        { bd8 bd8 bd8 bd8 bd8 bd8 }
-      }
-
-
 
 
     }
