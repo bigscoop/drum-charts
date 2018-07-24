@@ -37,10 +37,11 @@ main = \drums
 
       \override MultiMeasureRest.expand-limit = #3
       \compressFullBarRests
-      \inlineMMR R1 * 6/8 * 4
+
+      \inlineMMR R1 * 6/8 * 4^\markup "Piano"
       \bar "||"
 
-      \mark "Verse 1"
+      \mark "Verse 1 (0:18)"
       \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
       hh8 hh8 hh8 hh8 hh8 hho8
 
@@ -52,7 +53,7 @@ main = \drums
       \repeat unfold 4 { hh8 hh8 hh8 hh8 hh8 hh8 } \bar "||"
 
       \break
-      \mark "Chorus 1"
+      \mark "Chorus 1 (0:40)"
       \repeat unfold 2 { cymr8 cymr8 cymr8 cymr8 cymr8 cymr8 }
       cymc8 cymr8 cymr8 cymr8 cymr8 cymr8
       cymr8 cymr8 cymr8 cymr8 cymr8 <cymr hho>8
@@ -64,7 +65,7 @@ main = \drums
       \bar "||"
 
       \break
-      \mark "Verse 2"
+      \mark "Verse 2 (0:55)"
       \bar "[|:"
       \repeat volta 2 {
         \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
@@ -77,10 +78,11 @@ main = \drums
         { hh8 hh8 hh8 hh8 hh8 hho8 \bar ":|]" }
         { hh8 hh8 hh8 hh8 hh8 hh8 }
       }
+      \bar "||"
 
 
       \break
-      \mark "Chorus 2"
+      \mark "Chorus 2 (1:25)"
       r4. cymr8 cymr8 cymr8
       \repeat unfold 6 { cymr8 }
       cymc8 cymr8 cymr8 cymr8 cymr8 cymr8
@@ -93,7 +95,7 @@ main = \drums
       \bar "||"
 
       \break
-      \mark "Bridge"
+      \mark "Bridge (1:40)"
       \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
       hh8 hh8 hh8 hh8 hh8 hho8
 
@@ -110,9 +112,10 @@ main = \drums
       \repeat unfold 12 { hh8 }
       r1 * 6/8
       hho8 hho8 hho8 cymc8 cymc8 cymc8
+      \bar "||"
 
       \break
-      \mark "Chorus 3"
+      \mark "Chorus 3 (2:10)"
 
 
       \override TupletBracket.shorten-pair = #'(-4.0 . -4.0)
@@ -147,7 +150,7 @@ main = \drums
       hho4. r4.
 
       \break
-      \mark "End"
+      \mark "Outro (2:55)"
       \bar "[|:"
       \repeat volta 2 {
         \repeat percent 3 { hh8 hh8 hh8 hh8 hh8 hh8 }
@@ -170,7 +173,7 @@ main = \drums
 
       \override MultiMeasureRest.expand-limit = #3
       \compressFullBarRests
-      \inlineMMR R1 * 6/8 * 4 \bar "||"
+      \inlineMMR R1 * 6/8 * 4
       \repeat percent 3 { r1 * 6/8 }
       r4. ss4.
 
