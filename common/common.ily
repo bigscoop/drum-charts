@@ -87,7 +87,10 @@ graceRepeat =
   If @var{chord-repeat?} is specified the whole chord is repeated during
   @code{GraceMusic}"
    #{
+     % define the stem length for flam
      \once \override Stem #'length = #4
+     % define the stem length for beamed notes
+     \once \override Beam.positions = #'(1.9 . 1.9)
      \acciaccatura {  $(grace-from-main-note chord-repeat? how-much note) }
      $note
    #})
