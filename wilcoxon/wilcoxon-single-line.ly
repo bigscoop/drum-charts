@@ -55,7 +55,7 @@ snarestaff = {
 
       \stemUp
       \repeat volta 2 {
-        \drag sn8_"R"^> sn_"R"
+        \flam sn8_"R"^> sn_"R"
         \flam sn8_"L"^> sn_"L"
         \noBreak
 
