@@ -18,9 +18,7 @@
       #:sans "lilyjazz-chord"
       #:factor (/ staff-height pt 20)
       ))
-
   ragged-last-bottom = ##f
-
 }
 
 
