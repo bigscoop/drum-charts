@@ -1,7 +1,59 @@
 \version "2.19.56"
 
+\include "articulate.ly"
+
+\include "common.ily"
+
+
+
+flamm = \drummode { 
+  \override Stem #'length = #4
+  \acciaccatura {sn16} 
+  \revert Stem #'length  
+} 
+
+dragg = \drummode { 
+  \override Stem #'length = #1
+  \acciaccatura {toml16 sn16} 
+  \revert Stem #'length  
+} 
+
+#(define sjsdrums '(
+      (acousticbassdrum () #f -3)
+      (bassdrum () #f -3)
+      (sidestick cross #f 1)
+      (acousticsnare () #f 1)
+      (snare () #f 1)
+      (handclap triangle #f 1)
+      (electricsnare () #f 1)
+      (lowfloortom () #f -4)
+      (closedhihat cross "stopped" 5)
+      (hihat cross #f 5)
+      (highfloortom () #f -2)
+      (pedalhihat cross #f -5)
+      (lowtom () #f -1)
+      (openhihat cross "open" 5)
+      (halfopenhihat xcircle #f 3)
+      (lowmidtom () #f 0)
+      (himidtom () #f 2)
+      (crashcymbala cross #f 6)
+      (crashcymbal cross #f 6)
+      (hightom () #f 3)
+      (ridecymbala cross #f 4)
+      (ridecymbal cross #f 4)
+      (chinesecymbal xcircle #f 6)
+      (ridebell () #f 4)
+      (splashcymbal cross #f 7)
+      (cowbell triangle #f 5)
+      (crashcymbalb cross #f 5)
+      (vibraslap diamond #f 4)
+      (ridecymbalb cross #f 5)
+))
+
+
 \paper {
   %page-count = #2
+  system-count = #6
 }
 
 \layout {
@@ -30,66 +82,79 @@ ticktockIII = \drums {
   }
 }
 
+%
+%flam =
+%#(define-music-function (parser location music)(ly:music?)
+%   #{
+%     \acciaccatura { 16 } $music
+%   #})
 
-flam =
+dragd =
 #(define-music-function (parser location music)(ly:music?)
    #{
-     \acciaccatura { 16 } $music
-   #})
+       \override Stem #'length = #4
 
-drag =
-#(define-music-function (parser location music)(ly:music?)
-   #{
-     \acciaccatura { 16 16 } $music
+     \acciaccatura { 16 16 } 
+     \revert Stem #'length
+     $music
    #})
 
 soloI = \drummode
 {
   \time 2/4
   <<
-    \new DrumVoice {
+     \new DrumVoice {
       \voiceTwo
 
       \stemUp
       \repeat volta 2 {
-        \acciaccatura sn16( \stemUp sn8_"R")^> sn_"R"
-        \acciaccatura sn16( \stemUp sn8_"L")^> sn_"L"
+        \flam sn8_"R"^> sn_"R"
+        \flam sn8_"L"^> sn_"L"
+        \noBreak
 
-        \acciaccatura sn16( \stemUp sn_"R")^> sn_"L" sn_"R" sn_"R"
-        \acciaccatura sn( \stemUp sn_"L")^> sn_"R" sn_"L" sn_"L"
+        \flam sn16_"R"^> sn_"L" sn_"R" sn_"R"
+        \flam sn_"L"^> sn_"R" sn_"L" sn_"L"
+        
+        \noBreak
 
-        \acciaccatura sn16( \stemUp sn8_"R")^> sn16_"L" sn_"R"
-        \acciaccatura sn16( \stemUp sn8_"L")^> sn16_"R" sn_"L"
-
-        sn16_"R" sn_"L" \acciaccatura sn16( \stemUp sn8_"R")^>
-        sn16_"L" sn_"R" \acciaccatura sn16( \stemUp sn8_"L")^>
+        \flam sn8_"R"^> sn16_"L" sn_"R"
+        \flam sn8_"L"^> sn16_"R" sn_"L"
+        \noBreak
+        sn16_"R" sn_"L" \flam sn8_"R"^>
+        sn16_"L" sn_"R" \flam sn8_"L"^>
 
         \break
 
-        \acciaccatura sn16( \stemUp sn_"R") sn_"L"^> sn_"R" sn_"L"
-        \acciaccatura sn16( \stemUp sn8_"R")^> \acciaccatura sn16( \stemUp sn_"L") sn_"L"
+        \flam sn16_"R" sn_"L"^> sn_"R" sn_"L"
+        \flam sn8_"R"^> \flam sn16_"L" sn_"L"
+        \noBreak
 
-        \acciaccatura sn16( \stemUp sn8_"R")^> sn_"R"
-        \acciaccatura sn16( \stemUp sn8_"L")^> sn_"L"
+        \flam sn8_"R"^> sn_"R"
+        \flam sn8_"L"^> sn_"L"
 
-        \acciaccatura sn16( \stemUp sn_"R")^> sn_"L" sn_"R" sn_"R"
-        \acciaccatura sn( \stemUp sn_"L")^> sn_"R" sn_"L" sn_"L"
-
-        \acciaccatura sn16( \stemUp sn8_"R")^> \acciaccatura sn16( \stemUp sn8_"L")
-        \acciaccatura sn16( \stemUp sn8_"R") \acciaccatura sn16( \stemUp sn8_"L"^>)
+        \noBreak
+        
+        \flam sn16_"R"^> sn_"L" sn_"R" sn_"R"
+        \flam sn16_"L"^> sn_"R" sn_"L" sn_"L"
+        \noBreak
+        \flam sn8_"R"^> \flam sn8_"L"
+        \flam sn8_"R" \flam sn8_"L"^>
       }
       \break
 
 
       \repeat volta 2 {
-        \acciaccatura sn16( \stemUp sn_"R"^>) sn_"L" sn_"R" sn_"L"
+        \flam sn16_"R"^> sn_"L" sn_"R" sn_"L"
         sn_"R" sn_"L" sn_"R" sn_"L"
+        \noBreak
 
         sn_"R"^> sn_"L" sn_"R" sn_"R"
         sn_"L"^> sn_"R" sn_"L" sn_"L"
 
+        \noBreak
         sn_"R"^> sn_"L" sn_"R"^> sn_"L"
         sn_"R"^> sn_"L" sn_"R" sn_"R"
+        \noBreak
 
         sn_"L"^> sn_"R" sn_"L"^> sn_"R"
         sn_"L" sn_"R"^> sn_"L" sn_"L"
@@ -97,16 +162,20 @@ soloI = \drummode
         \break
         sn_"R"^> sn_"L" sn_"R" sn_"L"
         sn_"R" sn_"L" sn_"R" sn_"L"
+        \noBreak
 
         sn_"R"^> sn_"L" sn_"R" sn_"R"
         sn_"L"^> sn_"R" sn_"L" sn_"L"
 
+        \noBreak
+        
         sn_"R"^> sn_"L" sn_"R"^> sn_"L"
         sn_"R" sn_"L"^> sn_"R" sn_"L"
+        \noBreak
 
 
-        \acciaccatura sn16( \stemUp sn8_"R")^> \acciaccatura sn16( \stemUp sn8_"L"^>)
-        \acciaccatura sn16( \stemUp sn4_"R")^>
+        \flam sn8_"R"^> \flam sn8_"L"^>
+        \flam sn4_"R"^>
       }
 
     }
@@ -187,7 +256,10 @@ song =
 
     \layout
     {
-      %    \set countPercentRepeats = ##t
+\override NonMusicalPaperColumn.line-break-permission = ##f
+    % **EDIT** also here, specify ragged-right property
+    ragged-right = ##f
+          %    \set countPercentRepeats = ##t
       %    \set repeatCountVisibility = #(every-nth-repeat-count-visible 1)
     }
   }
@@ -218,7 +290,7 @@ song =
   {
     \unfoldRepeats
     {
-      \ticktock
+%      \ticktock
       \soloI
     }
 
